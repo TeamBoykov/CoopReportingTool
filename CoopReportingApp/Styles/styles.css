@@ -1,0 +1,44 @@
+﻿nav {
+    background-color:#008fd2;
+}
+    nav a {
+        color:white;
+    }
+.main-content {
+    margin:0;
+}
+/* rotator in-page placement */
+    div.rotator {
+	position:relative;
+	height:450px;
+	display:none;
+}
+/* rotator css */
+	div.rotator ul {
+	margin:0;
+	padding:0;
+}
+	div.rotator ul li {
+        float:right;
+	position:absolute;
+	list-style: none;
+}
+/* rotator image style */	
+	div.rotator ul li img {
+    float:right;
+	padding: 4px;
+	background-color:white;
+}
+    div.rotator ul li.show {
+	z-index:500;
+}
+.rotator img {
+    width:750px;
+    height:400px;
+}
+.login {
+    width:340px ;
+}
+.login .btn btn-warning {
+    float:right;
+}
