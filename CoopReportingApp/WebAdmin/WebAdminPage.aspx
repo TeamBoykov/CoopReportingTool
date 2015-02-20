@@ -14,7 +14,6 @@
                                 </td>
                                 <td>
                                     &nbsp;</td>
-                            
                             </tr>
                             <tr>
                                 <td>First Name</td>
@@ -124,7 +123,7 @@
             <div class="col-xs-12 col-md-4">
                 
                 <div class="jumbotron">
-                    <div class="ManagerUsers"> </div>
+                    
                     <h3>Manage User Accounts</h3>
                     <br /><br />
                     <asp:Button ID="btnManageStudent" runat="server" Text="Manage Student Account" CssClass="btn btn-primary" />
@@ -133,7 +132,7 @@
                     <br /><br />
                     <br /><br />
                     <br /><br />
-                    <br />
+                    <br /><br />
                     
                 </div>
             </div>
