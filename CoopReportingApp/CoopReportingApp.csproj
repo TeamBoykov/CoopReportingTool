@@ -70,6 +70,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\script.js" />
+    <Content Include="StudentSubmissionForm.aspx" />
     <Content Include="Student\student.aspx" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
@@ -107,12 +108,21 @@
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <Compile Include="StudentSubmissionForm.aspx.cs">
+      <DependentUpon>StudentSubmissionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentSubmissionForm.aspx.designer.cs">
+      <DependentUpon>StudentSubmissionForm.aspx</DependentUpon>
+=======
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+>>>>>>> d5babeb435bc9f641d6c2f43324bc18cab7d0c5b
     </Compile>
     <Compile Include="Student\student.aspx.cs">
       <DependentUpon>student.aspx</DependentUpon>
