@@ -5,16 +5,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+    <link href="../Styles/styles.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <div class="container">
     <form id="form1" runat="server">
-    <div>
+        <header>
+                <div class="row">
+                    <div class="col-md-4"><img src="../Images/header1.png" /></div>
+                </div>
+                <nav class="navbar navbar-custom navbar-static-top" style="background-color: #3399FF">
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" class="active"><b>Home</b> </a></li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        <div class="main-content">
+    
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
+            </div>
+        <footer id="footer">
+                <div class="modal-footer">
+                    Copyright © 2014 — 2015 Village World Corp. All rights reserved.
+                </div>
+            </footer>
+    
     </form>
+        </div>
 </body>
+    
 </html>
