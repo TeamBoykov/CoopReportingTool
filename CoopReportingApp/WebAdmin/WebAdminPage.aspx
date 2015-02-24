@@ -1,22 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdmin/webadmin.Master" AutoEventWireup="true" CodeBehind="WebAdminPage.aspx.cs" Inherits="CoopReportingApp.WebAdmin.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdmin/webadmin.Master" AutoEventWireup="true" CodeBehind="WebAdminPage.aspx.cs" Inherits="CoopReportingApp.testing1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
-              <div class="jumbotron">
-                   
-                        <table style="width: 100%;">
+    <div class="row">
+    <div class="row-same-height">
+        <div class="col-xs-12 col-md-8 col-xs-height">
+           
+            <div class="jumbotron"> 
+
+                <table style="width: 100%;">
                             <tr>
                                 <td>
                                     <h3>Add Co-op Advisor Account</h3>
+                                     <p><h5><i> Field(s) taged with a star (<span style="color:red">*</span>) are mandatory and must be filled.</i></h5> </p>
                                 </td>
                                 <td>
                                     &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>First Name</td>
+                                <td>First Name <span style="color:red">*</span> </td>
                                 <td>
                                     <asp:TextBox ID="AdvFNameTbx" runat="server"></asp:TextBox>
                                 </td>
@@ -29,7 +31,7 @@
                                 </td>
                            </tr>
                             <tr>
-                                <td>Last Name</td>
+                                <td>Last Name <span style="color:red">*</span></td>
                                 <td>
                                     <asp:TextBox ID="AdvLNameTbx" runat="server"></asp:TextBox>
                                 </td>
@@ -47,7 +49,7 @@
                             </tr>
                             
                             <tr>
-                                <td >ID Number</td>
+                                <td >ID Number <span style="color:red">*</span></td>
                                 <td >
                                     <asp:TextBox ID="AdvIDTbx" runat="server" MaxLength="9"></asp:TextBox>
                                 </td>
@@ -58,13 +60,14 @@
                                 <td>&nbsp;</td>
                                 <td>
                                     <asp:RegularExpressionValidator ID="IDNumberonly" runat="server" ControlToValidate="AdvIDTbx" Display="Dynamic" EnableClientScript="False" ErrorMessage="Number Only and Not Starting Zero !" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^[1-9][0-9]*$"></asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="AdvIdRequired" runat="server" ControlToValidate="AdvIDTbx" Display="Dynamic" EnableClientScript="False" ErrorMessage="ID Number Required !" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                                 </td>
                         
                                 <td>&nbsp;</td>
                                 
                             </tr>
                             <tr>
-                                <td>Create Password</td>
+                                <td>Create Password <span style="color:red">*</span> </td>
                                 <td>
                                     <asp:TextBox ID="AdvPW0" runat="server" MaxLength="8" TextMode="Password"></asp:TextBox>
                                 </td>
@@ -81,7 +84,7 @@
                                 
                             </tr>
                             <tr>
-                                <td>Confirm Password</td>
+                                <td>Confirm Password <span style="color:red">*</span> </td>
                                 <td>
                                     <asp:TextBox ID="AdvPW1" runat="server" MaxLength="8" TextMode="Password"></asp:TextBox>
                                 </td>
@@ -115,31 +118,35 @@
                                   
                             </tr>
                         </table>
-          
-            </div> 
-                
-                    
-       </div>
-            <div class="col-xs-12 col-md-4">
-                
-                <div class="jumbotron">
-                    
-                    <h3>Manage User Accounts</h3>
+
+            </div>
+
+        </div>
+        
+        <div class="col-xs-6 col-md-4 col-xs-height col-bottom">
+            <div class="jumbotron"> 
+
+                 <h3>Manage User Accounts</h3>
                     <br /><br />
+                <p> </p>
+                 <p> </p>
                     <asp:Button ID="btnManageStudent" runat="server" Text="Manage Student Account" CssClass="btn btn-primary" />
                     <br /><br />
                     <asp:Button ID="btnManageAdvisor" runat="server" Text="Manage Advisor Account" CssClass="btn btn-primary" />
-                    <br /><br />
-                    <br /><br />
-                    <br /><br />
-                    <br /><br />
+                   <br />&nbsp;<br /> 
+                   <br /><br /> 
+                   <br /><br /> 
+                   <br /><br /> 
                     
-                </div>
+                
             </div>
+
         </div>
-    </div>
-
-
-
-
+     
+</div>
+        </div>
+      
 </asp:Content>
+
+
+

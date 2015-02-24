@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CoopReportingApp.WebAdmin {
+namespace CoopReportingApp {
     
     
-    public partial class WebForm2 {
+    public partial class testing1 {
         
         /// <summary>
         /// AdvFNameTbx control.
@@ -65,6 +65,15 @@ namespace CoopReportingApp.WebAdmin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator IDNumberonly;
+        
+        /// <summary>
+        /// AdvIdRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AdvIdRequired;
         
         /// <summary>
         /// AdvPW0 control.
