@@ -6,18 +6,22 @@
 <head runat="server">
     <title></title>
     <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/script.js"></script>
     <link href="Styles/bootstrap.css" rel="stylesheet" />
     <link href="Styles/styles.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
 </head>
-<body>
+<body id="mainbody">
     <div class="container">
         <form id="form1" runat="server">
             <header>
                 <div class="row">
                     <div class="col-md-4">
+<<<<<<< HEAD
+                        <img src="Images/header1.png" alt="header" />
+=======
                         <img src="Images/header1.png" alt="header" /></div>
                 </div>
                 <nav class="navbar navbar-custom navbar-static-top">
@@ -27,59 +31,25 @@
                             <li><a href="#"><b>Login</b></a></li>
                             <li><a href="#"><b>Registration</b></a></li>
                         </ul>
+>>>>>>> 89d41a11c9342d6eb9a9a33cdddbbd8fe3429788
                     </div>
+                </div>
+                <nav>   
+                    <ul class="nav nav-pills">
+                        <li role="presentation"><a href="http://www.centennialcollege.ca" target="_blank">Home</a></li>
+                        <li role="presentation"><a href="index.aspx">Login</a></li>
+                        <li role="presentation"><a href="Registration.aspx">Registration</a></li>
+                    </ul>
                 </nav>
             </header>
             <div class="main-content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-            <footer id="footer">
-                <div class="modal-footer">
-                    Copyright © 2014 — 2015 Village World Corp. All rights reserved.
-                </div>
+            <footer class="footer">
+                    <p>Copyright © 2014-15 <a href="http://www.centennialcollege.ca" target="_blank">Centennialcollge.ca</a>. All rights reserved.</p>
             </footer>
         </form>
     </div>
 </body>
-<script>
-    function theRotator() {
-        //Set the opacity of all images to 0
-        $('div.rotator ul li').css({ opacity: 0.0 });
-
-        //Get the first image and display it (gets set to full opacity)
-        $('div.rotator ul li:first').css({ opacity: 1.0 });
-
-        //Call the rotator function to run the slideshow, 6000 = change to next image after 6 seconds
-
-        if ($('div.rotator ul li').length > 1) {
-            setTimeout('rotate()', 6000);
-        }
-    }
-
-    function rotate() {
-        //Get the first image
-        var current = ($('div.rotator ul li.show') ? $('div.rotator ul li.show') : $('div.rotator ul li:first'));
-
-        if (current.length == 0) current = $('div.rotator ul li:first');
-
-        //Get next image, when it reaches the end, rotate it back to the first image
-        var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.rotator ul li:first') : current.next()) : $('div.rotator ul li:first'));
-
-
-        //Set the fade in effect for the next image, the show class has higher z-index
-        next.css({ opacity: 0.0 }).addClass('show').animate({ opacity: 1.0 }, 1000);
-
-        //Hide the current image
-        current.animate({ opacity: 0.0 }, 1000, function () { setTimeout('rotate()', 6000); }).removeClass('show');
-
-    };
-
-    $(document).ready(function () {
-        //Load the slideshow
-        theRotator();
-        $('div.rotator').fadeIn(1000);
-        $('div.rotator ul li').fadeIn(1000); // tweek for IE
-    });
-</script>
 </html>
