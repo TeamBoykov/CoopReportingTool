@@ -19,20 +19,7 @@
             <header>
                 <div class="row">
                     <div class="col-md-4">
-<<<<<<< HEAD
-                        <img src="Images/header1.png" alt="header" />
-=======
                         <img src="Images/header1.png" alt="header" /></div>
-                </div>
-                <nav class="navbar navbar-custom navbar-static-top">
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#" class="active"><b>Home</b> </a></li>
-                            <li><a href="#"><b>Login</b></a></li>
-                            <li><a href="#"><b>Registration</b></a></li>
-                        </ul>
->>>>>>> 89d41a11c9342d6eb9a9a33cdddbbd8fe3429788
-                    </div>
                 </div>
                 <nav>   
                     <ul class="nav nav-pills">
