@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewStudent.master.cs" Inherits="CoopReportingApp.Student.NewStudent" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+    <link href="../Styles/styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+    <form id="form1" runat="server">
+        <header>
+                <div class="row">
+                    <div class="col-md-4"><img src="../Images/header1.png" /></div>
+                </div>
+                <nav class="navbar navbar-custom navbar-static-top" style="background-color: #3399FF">
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#" class="active"><b>Work History</b> </a></li>
+                            <li><a href="#" class="active"><b>Profile</b> </a></li>
+                            <li><a href="#" class="active"><b>Company</b> </a></li>
+                            <li><a class="active"><b>Report <asp:DropDownList ID="DropDownReport" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownReport_SelectedIndexChanged">
+                                
+                                <asp:ListItem Text="Select" Value="0">-Select</asp:ListItem> 
+                                <asp:ListItem Text="View Report (s)" Value="../index.aspx"></asp:ListItem>
+                                <asp:ListItem Text="New Report" Value="#"></asp:ListItem>
+                            
+                            </asp:DropDownList>
+
+                           </b> </a>
+                                
+                         </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            
+            
+            </header>
+        <div class="main-content">
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+        <footer id="footer">
+                <div class="footer">
+                    <p>Copyright © 2014-15 <a href="http://www.centennialcollege.ca" target="_blank">Centennialcollge.ca</a>. All rights reserved.</p>
+                </div>
+            </footer>
+    
+    </form>
+        </div>
+</body>
+    
+</html>

@@ -58,16 +58,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoopAdvisor\coopadvisor.aspx" />
+    <Content Include="Images\college.png" />
+    <Content Include="Images\college1.jpg" />
+    <Content Include="Images\college2.jpeg" />
+    <Content Include="Images\college3.jpeg" />
+    <Content Include="Images\header.jpg" />
+    <Content Include="Images\header1.png" />
     <Content Include="index.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\script.js" />
-    <Content Include="Student\student.aspx" />
+    <Content Include="Student\StudentHome.aspx" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\full-slider.css" />
+    <Content Include="WebAdmin\WebAdminPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,33 +107,26 @@
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.aspx.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
+    <Compile Include="Student\NewStudent.Master.cs">
+      <DependentUpon>NewStudent.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registration.aspx.designer.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
+    <Compile Include="Student\NewStudent.Master.designer.cs">
+      <DependentUpon>NewStudent.Master</DependentUpon>
     </Compile>
-    <Compile Include="Student\student.aspx.cs">
-      <DependentUpon>student.aspx</DependentUpon>
+    <Compile Include="Student\StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\student.aspx.designer.cs">
-      <DependentUpon>student.aspx</DependentUpon>
+    <Compile Include="Student\StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Student\student.Master.cs">
-      <DependentUpon>student.Master</DependentUpon>
+    <Compile Include="WebAdmin\WebAdminPage.aspx.cs">
+      <DependentUpon>WebAdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\student.Master.designer.cs">
-      <DependentUpon>student.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebAdmin\webadmin.aspx.cs">
-      <DependentUpon>webadmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebAdmin\webadmin.aspx.designer.cs">
-      <DependentUpon>webadmin.aspx</DependentUpon>
+    <Compile Include="WebAdmin\WebAdminPage.aspx.designer.cs">
+      <DependentUpon>WebAdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebAdmin\webadmin.Master.cs">
       <DependentUpon>webadmin.Master</DependentUpon>
@@ -139,19 +139,17 @@
   <ItemGroup>
     <Content Include="index.Master" />
     <Content Include="CoopAdvisor\coopadvisor.Master" />
-    <Content Include="Student\student.Master" />
+    <Content Include="Student\NewStudent.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="WebAdmin\webadmin.aspx" />
     <Content Include="WebAdmin\webadmin.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

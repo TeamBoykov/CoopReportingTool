@@ -1603,6 +1603,8 @@ pre code {
 }
 .col-xs-12 {
   width: 100%;
+    top: 0px;
+    left: 0px;
 }
 .col-xs-11 {
   width: 91.66666667%;
@@ -4858,6 +4860,7 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
+    height: 443px;
 }
 .jumbotron .container {
   max-width: 100%;
