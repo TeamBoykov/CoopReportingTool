@@ -148,6 +148,24 @@ namespace CoopReportingApp {
         protected global::System.Web.UI.WebControls.TextBox txtMob;
         
         /// <summary>
+        /// lblPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPhone;
+        
+        /// <summary>
+        /// txtPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
+        
+        /// <summary>
         /// lblPassword control.
         /// </summary>
         /// <remarks>
@@ -247,13 +265,13 @@ namespace CoopReportingApp {
         protected global::System.Web.UI.WebControls.Label lblWorkTerm;
         
         /// <summary>
-        /// txtWorkTerm control.
+        /// dropWorkTerm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtWorkTerm;
+        protected global::System.Web.UI.WebControls.DropDownList dropWorkTerm;
         
         /// <summary>
         /// lblCoopAdvisor control.
