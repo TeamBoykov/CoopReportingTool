@@ -5,16 +5,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="../Scripts/jquery.js"></script>
+    <script src="../Scripts/script.js"></script>
+    <link href="../Styles/bootstrap.css" rel="stylesheet" />
+    <link href="../Styles/styles.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+<body id="mainbody">
+    <div class="container">
+        <form id="form1" runat="server">
+            <header>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="../Images/header1.png" />
+                    </div>
+                </div>
+                <nav>
+                    <ul class="nav nav-pills">
+                        <li role="presentation"><a href="StudentReport.aspx">Student Monthly Report</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="main-content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer class="footer">
+                <p>Copyright © 2014-15 <a href="http://www.centennialcollege.ca" target="_blank">Centennialcollge.ca</a>. All rights reserved.</p>
+            </footer>
+        </form>
     </div>
-    </form>
 </body>
 </html>
