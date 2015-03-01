@@ -21,12 +21,6 @@ function rotate() {
     //Get next image, when it reaches the end, rotate it back to the first image
     var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.rotator ul li:first') : current.next()) : $('div.rotator ul li:first'));
 
-    //Un-comment the 3 lines below to get the images in random order
-
-    //var sibs = current.siblings();
-    //var rndNum = Math.floor(Math.random() * sibs.length );
-    //var next = $( sibs[ rndNum ] );
-
 
     //Set the fade in effect for the next image, the show class has higher z-index
     next.css({ opacity: 0.0 }).addClass('show').animate({ opacity: 1.0 }, 1000);
@@ -35,7 +29,8 @@ function rotate() {
     current.animate({ opacity: 0.0 }, 1000, function () { setTimeout('rotate()', 6000); }).removeClass('show');
 
 };
-(function ($) {
+
+$(document).ready(function () {
     //Load the slideshow
     theRotator();
     $('div.rotator').fadeIn(1000);
