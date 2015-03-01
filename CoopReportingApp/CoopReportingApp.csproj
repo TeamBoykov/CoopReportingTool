@@ -75,8 +75,8 @@
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\full-slider.css" />
-    <Content Include="Web.config" />
     <Content Include="WebAdmin\WebAdminPage.aspx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoopAdvisor\coopadvisor.aspx.cs">
@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="StudentSubmissionForm.aspx.cs">
       <DependentUpon>StudentSubmissionForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,6 +125,8 @@
       <DependentUpon>Registration.aspx</DependentUpon>
 >>>>>>> d5babeb435bc9f641d6c2f43324bc18cab7d0c5b
     </Compile>
+=======
+>>>>>>> 26fde4d88b2d4b7467e64c19e2354d004273c028
     <Compile Include="Student\student.aspx.cs">
       <DependentUpon>student.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,19 +141,19 @@
     <Compile Include="Student\student.Master.designer.cs">
       <DependentUpon>student.Master</DependentUpon>
     </Compile>
-    <Compile Include="WebAdmin\webadmin.Master.cs">
-      <DependentUpon>webadmin.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebAdmin\webadmin.Master.designer.cs">
-      <DependentUpon>webadmin.Master</DependentUpon>
-    </Compile>
     <Compile Include="WebAdmin\WebAdminPage.aspx.cs">
       <DependentUpon>WebAdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebAdmin\WebAdminPage.aspx.designer.cs">
       <DependentUpon>WebAdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAdmin\webadmin.Master.cs">
+      <DependentUpon>webadmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAdmin\webadmin.Master.designer.cs">
+      <DependentUpon>webadmin.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
