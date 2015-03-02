@@ -94,4 +94,22 @@ public class CoopReportDAL
             throw;
         }
     }
+
+    internal static DataSet IndividualReport(int Id)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_CoopForm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@Id", Id);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "R");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }

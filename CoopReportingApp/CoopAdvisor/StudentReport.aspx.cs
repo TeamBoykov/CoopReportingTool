@@ -13,7 +13,8 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack) {
+        if (!IsPostBack)
+        {
             StudentCoopReports();
         }
     }
@@ -22,7 +23,8 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
     {
         DataSet ds = new DataSet();
         ds = ObjCoopReportBO.AllStudentCoopReports();
-        if (ds.Tables[0].Rows.Count > 0) {
+        if (ds.Tables[0].Rows.Count > 0)
+        {
             gdvCoopReports.DataSource = ds;
             gdvCoopReports.DataBind();
         }
@@ -31,13 +33,16 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
     {
         gdvCoopReports.DataSource = null;
         gdvCoopReports.DataBind();
-        if (txtStudentID.Text == "") {
+        if (txtStudentID.Text == "")
+        {
             ReportByMonth();
         }
-        else if (ddlReportMonth.SelectedIndex == 0){
+        else if (ddlReportMonth.SelectedIndex == 0)
+        {
             gdvCoopReportsUsingStudentID();
         }
-        else {
+        else
+        {
             ObjCoopReportBO.StudentID = Convert.ToInt64(txtStudentID.Text);
             ObjCoopReportBO.ReportMonth = ddlReportMonth.SelectedItem.ToString();
             DataSet ds = new DataSet();
@@ -48,7 +53,7 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
                 gdvCoopReports.DataBind();
             }
         }
-       
+
     }
 
     private void gdvCoopReportsUsingStudentID()
@@ -74,4 +79,11 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
             gdvCoopReports.DataBind();
         }
     }
-}
+    protected void gdvCoopReports_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "View")
+        {
+            Response.Redirect("IndividualReport.aspx?Id=" + e.CommandArgument);
+        }
+    }
+}   
