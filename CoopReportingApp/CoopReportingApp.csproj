@@ -70,7 +70,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\script.js" />
-    <Content Include="Student\student.aspx" />
+    <Content Include="Student\StudentHome.aspx" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\full-slider.css" />
@@ -107,19 +107,19 @@
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student\student.aspx.cs">
-      <DependentUpon>student.aspx</DependentUpon>
+    <Compile Include="Student\NewStudent.Master.cs">
+      <DependentUpon>NewStudent.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\student.aspx.designer.cs">
-      <DependentUpon>student.aspx</DependentUpon>
+    <Compile Include="Student\NewStudent.Master.designer.cs">
+      <DependentUpon>NewStudent.Master</DependentUpon>
     </Compile>
-    <Compile Include="Student\student.Master.cs">
-      <DependentUpon>student.Master</DependentUpon>
+    <Compile Include="Student\StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\student.Master.designer.cs">
-      <DependentUpon>student.Master</DependentUpon>
+    <Compile Include="Student\StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebAdmin\WebAdminPage.aspx.cs">
       <DependentUpon>WebAdminPage.aspx</DependentUpon>
@@ -139,7 +139,7 @@
   <ItemGroup>
     <Content Include="index.Master" />
     <Content Include="CoopAdvisor\coopadvisor.Master" />
-    <Content Include="Student\student.Master" />
+    <Content Include="Student\NewStudent.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
