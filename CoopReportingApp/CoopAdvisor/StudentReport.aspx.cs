@@ -22,7 +22,11 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
 
     //To get businees objects  from CoopReportBO class
     CoopReportBO ObjCoopReportBO = new CoopReportBO();
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> 43eb37aa673084a9650fc5b99ce9f0580ed3c16e
     //This method will get all students coop reports
     private void StudentCoopReports()
     {
