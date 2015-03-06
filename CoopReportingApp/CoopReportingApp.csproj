@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoopAdvisor\coopadvisor.aspx" />
+    <Content Include="CoopAdvisor\GradePage.aspx" />
     <Content Include="Images\college.png" />
     <Content Include="Images\college1.jpg" />
     <Content Include="Images\college2.jpeg" />
@@ -91,6 +92,20 @@
     </Compile>
     <Compile Include="CoopAdvisor\coopadvisor.Master.designer.cs">
       <DependentUpon>coopadvisor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.aspx.cs">
+      <DependentUpon>GradePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.aspx.designer.cs">
+      <DependentUpon>GradePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.Master.cs">
+      <DependentUpon>GradePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.Master.designer.cs">
+      <DependentUpon>GradePage.Master</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -140,6 +155,7 @@
     <Content Include="index.Master" />
     <Content Include="CoopAdvisor\coopadvisor.Master" />
     <Content Include="Student\NewStudent.Master" />
+    <Content Include="CoopAdvisor\GradePage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
