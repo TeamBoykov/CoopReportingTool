@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="coopadvisor.master.cs" Inherits="CoopReportingApp.CoopAdvisor.coopadvisor" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="coopadvisor.master.cs" Inherits="CoopReportingApp.CoopAdvisor.coopadvisor" %>
 
 <!DOCTYPE html>
 
