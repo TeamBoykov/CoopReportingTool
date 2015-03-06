@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,4 +57,19 @@ public partial class CoopAdvisor_SelectedStudent : System.Web.UI.Page
             Response.Redirect("IndividualEvalutionForm.aspx?ID=" + e.CommandArgument.ToString());
         }
     }
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class CoopAdvisor_SelectedStudent : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+>>>>>>> 43eb37aa673084a9650fc5b99ce9f0580ed3c16e
 }
