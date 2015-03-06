@@ -6,7 +6,7 @@
         <h3>Individual Coop Reports:</h3>
     <asp:GridView ID="gdvSelectdReport" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None" AutoGenerateColumns="False"
         Width="100%" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px"
-        CellSpacing="1" >
+        CellSpacing="1">
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <SelectedRowStyle BackColor="#9471DE" ForeColor="White" Font-Bold="True" />
         <PagerStyle BackColor="#C6C3C6" ForeColor="Black" />
