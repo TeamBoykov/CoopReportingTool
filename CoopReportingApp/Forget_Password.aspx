@@ -25,7 +25,7 @@
         <div class="col-xs-6 col-md-4">
             <div class="login">
                 <h3>Forget Password</h3>
-               <asp:TextBox ID="txtemail" CssClass="form-control" placeholder="Enter your valid E-mail address" runat="server"></asp:TextBox>
+               <asp:TextBox ID="txtemail" CssClass="form-control" placeholder="Please, enter valid e-mail address" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="User name required"
                     ControlToValidate="txtemail" EnableClientScript="False" Font-Size="Small" ForeColor="#CC0000"
                     SetFocusOnError="True"></asp:RequiredFieldValidator><br />
