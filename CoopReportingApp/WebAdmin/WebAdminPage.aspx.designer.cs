@@ -76,6 +76,15 @@ namespace CoopReportingApp {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator IDNumberonly;
         
         /// <summary>
+        /// RegeExp_9Digitonly control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegeExp_9Digitonly;
+        
+        /// <summary>
         /// Advcell control.
         /// </summary>
         /// <remarks>

@@ -45,6 +45,7 @@
                                     <asp:TextBox ID="AdvIDTbx" runat="server" MaxLength="9"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="AdvIdRequired" runat="server" ControlToValidate="AdvIDTbx" EnableClientScript="False" ErrorMessage="Required !" ForeColor="Red" SetFocusOnError="True" Display="Dynamic"></asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="IDNumberonly" runat="server" ControlToValidate="AdvIDTbx" EnableClientScript="False" ErrorMessage="Number Only and Not Starting Zero !" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^[1-9][0-9]*$" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="RegeExp_9Digitonly" runat="server" ControlToValidate="AdvIDTbx" Display="Dynamic" EnableClientScript="False" ErrorMessage="Required 9 Digits !" ForeColor="Red" SetFocusOnError="True" ValidationExpression="\d{9}"></asp:RegularExpressionValidator>
                                 </td>
                                     
                                
