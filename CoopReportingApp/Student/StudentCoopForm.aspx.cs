@@ -14,7 +14,8 @@ public partial class Student_StudentCoopForm : System.Web.UI.Page
     CoopReportBO ObjCoopReportBO = new CoopReportBO();    
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        Submitform();         
+        Submitform();
+      //  MessageBox.Show();
     }
 
     //Insert C# Code for StudentCoop Form
@@ -32,7 +33,7 @@ public partial class Student_StudentCoopForm : System.Web.UI.Page
         ObjCoopReportBO.Year = ddlYear.Text;
         ObjCoopReportBO.ReportMonth = ddlRmonth.SelectedItem.Text;
         ObjCoopReportBO.Oraganization = txtOrg.Text;
-        ObjCoopReportBO.CoopAdvisor = txtCoopAdvisorName.Text;
+        ObjCoopReportBO.AdvisorName = txtCoopAdvisorName.Text;
         ObjCoopReportBO.Comments = txtComments.Text;
         ObjCoopReportBO.DutiesPerformed = txtDutiesPerformed.Text;
         ObjCoopReportBO.LikeIntership = rblIntership.SelectedItem.Value;
@@ -56,6 +57,8 @@ public partial class Student_StudentCoopForm : System.Web.UI.Page
         ObjCoopReportBO.SupervisorActive = rblSupervisorActive.SelectedItem.Value;
         
         ObjCoopReportBO.SubmitForm(ObjCoopReportBO);
+        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+        
     }
 
     //Content Clear backend Code
@@ -89,6 +92,7 @@ public partial class Student_StudentCoopForm : System.Web.UI.Page
         rblSelfEvaluation.Text = "";
         rblStructured.Text = "";
         rblSupervisorActive.Text = "";
+        errorMessage.Visible = false;
               
     }
 }
