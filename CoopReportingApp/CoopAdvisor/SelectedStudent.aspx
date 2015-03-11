@@ -5,7 +5,7 @@
         <h3>Individual Coop Reports:</h3>
     <asp:GridView ID="gdvSelectdReport" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None" AutoGenerateColumns="False"
         Width="100%" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px"
-        CellSpacing="1">
+        CellSpacing="1" OnRowCommand="gdvSelectdReport_RowCommand1">
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <SelectedRowStyle BackColor="#9471DE" ForeColor="White" Font-Bold="True" />
         <PagerStyle BackColor="#C6C3C6" ForeColor="Black" />
@@ -32,7 +32,7 @@
     <h3>Employer Evalution Form</h3>
     <asp:GridView ID="gdvEmployeeEvaForm" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None" AutoGenerateColumns="False"
         Width="100%" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px"
-        CellSpacing="1">
+        CellSpacing="1" OnRowCommand="gdvEmployeeEvaForm_RowCommand1">
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <SelectedRowStyle BackColor="#9471DE" ForeColor="White" Font-Bold="True" />
         <PagerStyle BackColor="#C6C3C6" ForeColor="Black" />
@@ -59,10 +59,4 @@
     <hr />
     <h4><asp:Label ID="lblmessage" runat="server" Text=""></asp:Label></h4>
     <asp:Button ID="btnGrade" runat="server" CssClass="btn btn-success" Text="Grade" />
-<<<<<<< HEAD
     <hr /></asp:Content>
-=======
-    <hr />
-</asp:Content>
-
->>>>>>> 06f342c67e2c07a8a605b6532646673279d94e63
