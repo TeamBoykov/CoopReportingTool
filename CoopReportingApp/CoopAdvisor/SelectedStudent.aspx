@@ -1,12 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CoopAdvisor/coopadvisor.Master" AutoEventWireup="true" CodeFile="SelectedStudent.aspx.cs" Inherits="CoopAdvisor_SelectedStudent" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <h3>Individual Coop Reports:</h3>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"></asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <h3>Individual Coop Reports:</h3>
     <asp:GridView ID="gdvSelectdReport" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None" AutoGenerateColumns="False"
         Width="100%" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px"
-        CellSpacing="1" OnRowCommand="gdvSelectdReport_RowCommand">
+        CellSpacing="1">
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <SelectedRowStyle BackColor="#9471DE" ForeColor="White" Font-Bold="True" />
         <PagerStyle BackColor="#C6C3C6" ForeColor="Black" />
@@ -33,7 +32,7 @@
     <h3>Employer Evalution Form</h3>
     <asp:GridView ID="gdvEmployeeEvaForm" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None" AutoGenerateColumns="False"
         Width="100%" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px"
-        CellSpacing="1" OnRowCommand="gdvEmployeeEvaForm_RowCommand">
+        CellSpacing="1">
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <SelectedRowStyle BackColor="#9471DE" ForeColor="White" Font-Bold="True" />
         <PagerStyle BackColor="#C6C3C6" ForeColor="Black" />
@@ -58,10 +57,12 @@
         <RowStyle />
     </asp:GridView>
     <hr />
-    <h4>
-
-        <asp:Label ID="lblmessage" runat="server" Text=""></asp:Label></h4>
+    <h4><asp:Label ID="lblmessage" runat="server" Text=""></asp:Label></h4>
     <asp:Button ID="btnGrade" runat="server" CssClass="btn btn-success" Text="Grade" />
+<<<<<<< HEAD
+    <hr /></asp:Content>
+=======
     <hr />
 </asp:Content>
 
+>>>>>>> 06f342c67e2c07a8a605b6532646673279d94e63

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CoopReportingApp/CoopAdvisor/coopadvisor.Master" AutoEventWireup="false" CodeFile="CoopAdvisorReport.aspx.vb" Inherits="CoopReportingApp_CoopAdvisor_CoopAdvisorReport" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CoopAdvisor/coopadvisor.Master" AutoEventWireup="false" CodeFile="CoopAdvisorReport.aspx.vb" Inherits="CoopReportingApp_CoopAdvisor_CoopAdvisorReport" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
