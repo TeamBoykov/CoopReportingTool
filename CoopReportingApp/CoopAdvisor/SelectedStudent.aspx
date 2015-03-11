@@ -59,4 +59,10 @@
     <hr />
     <h4><asp:Label ID="lblmessage" runat="server" Text=""></asp:Label></h4>
     <asp:Button ID="btnGrade" runat="server" CssClass="btn btn-success" Text="Grade" />
+<<<<<<< HEAD
     <hr /></asp:Content>
+=======
+    <hr />
+</asp:Content>
+
+>>>>>>> 06f342c67e2c07a8a605b6532646673279d94e63
