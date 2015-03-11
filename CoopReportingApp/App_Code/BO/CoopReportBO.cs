@@ -17,7 +17,7 @@ public class CoopReportBO
     public int Id { get; set; }
     public string StudentName { get; set; }
     public Int64 StudentID { get; set; }
-    public string CoopAdvisor { get; set; }
+    public string AdvisorName { get; set; }
     public string Oraganization { get; set; }
     public string Year { get; set; }
     public string ReportMonth { get; set; }

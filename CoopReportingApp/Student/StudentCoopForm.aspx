@@ -48,18 +48,18 @@
         <div class="col-md-6">
             <asp:DropDownList ID="ddlRmonth" CssClass="form-control" runat="server">
                 <asp:ListItem Text="Choose Month" Value="0"> </asp:ListItem>
-                <asp:ListItem>Jan</asp:ListItem>
-                <asp:ListItem>Feb</asp:ListItem>
-                <asp:ListItem>Mar</asp:ListItem>
-                <asp:ListItem>Apr</asp:ListItem>
+                <asp:ListItem>January</asp:ListItem>
+                <asp:ListItem>February</asp:ListItem>
+                <asp:ListItem>March</asp:ListItem>
+                <asp:ListItem>April</asp:ListItem>
                 <asp:ListItem>May</asp:ListItem>
-                <asp:ListItem>Jun</asp:ListItem>
-                <asp:ListItem>Jul</asp:ListItem>
-                <asp:ListItem>Aug</asp:ListItem>
-                <asp:ListItem>Sept</asp:ListItem>
-                <asp:ListItem>Oct</asp:ListItem>
-                <asp:ListItem>Nov</asp:ListItem>
-                <asp:ListItem>Dec</asp:ListItem>
+                <asp:ListItem>June</asp:ListItem>
+                <asp:ListItem>July</asp:ListItem>
+                <asp:ListItem>August</asp:ListItem>
+                <asp:ListItem>September</asp:ListItem>
+                <asp:ListItem>October</asp:ListItem>
+                <asp:ListItem>November</asp:ListItem>
+                <asp:ListItem>December</asp:ListItem>
                 <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <asp:RequiredFieldValidator InitialValue="0" ErrorMessage="Month Required" ForeColor="Red" ControlToValidate="ddlRmonth"
@@ -93,12 +93,12 @@
         </div>
 
 
-    <p>1. Do you like your internship? Why or why not? Please explain.</p>
+    <p>1. Do you like your internship?</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblIntership" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitely Not</asp:ListItem>
@@ -106,12 +106,12 @@
         </div>
     </div>
     <hr />
-    <p>2. Do you feel adequately prepared for your internship? Please explain.</p>
+    <p>2. Do you feel adequately prepared for your internship? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblAdequately" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitely Not</asp:ListItem>
@@ -119,12 +119,12 @@
         </div>
     </div>
     <hr />
-    <p>3. Are you able to relate your internship to your curriculum in communication? Please explain.</p>
+    <p>3. Are you able to relate your internship to your curriculum in communication?</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblCurriculum" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitely Not</asp:ListItem>
@@ -132,12 +132,12 @@
         </div>
     </div>
     <hr />
-    <p>4. Does your internship fulfill your expectations? Please explain</p>
+    <p>4. Does your internship fulfill your expectations?</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblExpectation" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -150,7 +150,7 @@
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblRequirements" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -163,7 +163,7 @@
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblCoopAdvisor" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -176,7 +176,7 @@
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblAgencySupervisor" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -184,12 +184,12 @@
         </div>
     </div>
     <hr />
-    <p>8. Is your agency supervisor aware or actively involved in your internship? Please explain.</p>
+    <p>8. Is your agency supervisor aware or actively involved in your internship? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblSupervisorActive" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -202,7 +202,7 @@
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblAttendance" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -215,7 +215,7 @@
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblPunctuality" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -223,12 +223,12 @@
         </div>
     </div>
     <hr />
-    <p>11. Is your internship structured enough? Please explain.</p>
+    <p>11. Is your internship structured enough?</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblStructured" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -236,12 +236,12 @@
         </div>
     </div>
     <hr />
-    <p>12. Is your internship overly structured? Please explain.</p>
+    <p>12. Is your internship overly structured? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblOverStructured" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -249,12 +249,12 @@
         </div>
     </div>
     <hr />
-    <p>13. Do you currently have any problems related to your internship? Please explain</p>
+    <p>13. Do you currently have any problems related to your internship?</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblProblems" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -264,13 +264,13 @@
     <hr />
     <p>
         14. Have you received help with intern-related problems from sources other than your faculty and
-agencysupervisor? Please explain.
+agencysupervisor? 
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblHelpProblems" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -278,12 +278,12 @@ agencysupervisor? Please explain.
         </div>
     </div>
     <hr />
-    <p>15. Are you learning from your internship? Please explain.</p>
+    <p>15. Are you learning from your internship? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblLearning" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -291,12 +291,12 @@ agencysupervisor? Please explain.
         </div>
     </div>
     <hr />
-    <p>16. Is your internship rewarding? Please explain.</p>
+    <p>16. Is your internship rewarding? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblRewarding" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -304,12 +304,12 @@ agencysupervisor? Please explain.
         </div>
     </div>
     <hr />
-    <p>17. Do you think you are mastering the objectives established for the internship? Please explain.</p>
+    <p>17. Do you think you are mastering the objectives established for the internship? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblObjectiveEstablished" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -317,12 +317,12 @@ agencysupervisor? Please explain.
         </div>
     </div>
     <hr />
-    <p>18. Would you recommend your internship to others? Why or why not? Please explain.</p>
+    <p>18. Would you recommend your internship to others? </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblRecommend" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
+                <asp:ListItem Selected="True">Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
                 <asp:ListItem>Definitly Not</asp:ListItem>
@@ -330,15 +330,15 @@ agencysupervisor? Please explain.
         </div>
     </div>
     <hr />
-    <p>19. Self-evaluation at midterm (circle appropriate choice):</p>
+    <p>19. Self-evaluation:</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblSelfEvaluation" runat="server" RepeatDirection="Horizontal" Width="1000px">
-                <asp:ListItem>Yes Definitely</asp:ListItem>
-                <asp:ListItem>Yes</asp:ListItem>
-                <asp:ListItem>Somewhat</asp:ListItem>
-                <asp:ListItem>No</asp:ListItem>
-                <asp:ListItem>Definitly Not</asp:ListItem>
+                <asp:ListItem>Exceptional</asp:ListItem>
+                <asp:ListItem Selected="True">Exceeded Expectations</asp:ListItem>
+                <asp:ListItem>Successfully Met Exceptations</asp:ListItem>
+                <asp:ListItem>Did not meet Expectations</asp:ListItem>
+
             </asp:RadioButtonList>
         </div>
     </div>
@@ -351,7 +351,7 @@ agencysupervisor? Please explain.
     <hr />
 
     <div align="center">
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click"  />
         <asp:Button ID="btnClear" runat="server" CausesValidation="False"
             Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" OnClick="btnClear_Click" />
     </div>

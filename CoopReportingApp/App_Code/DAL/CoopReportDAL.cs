@@ -125,7 +125,7 @@ public class CoopReportDAL
             cmd.Parameters.AddWithValue("@StudentID", objBEL.StudentID);
             cmd.Parameters.AddWithValue("@Oraganization", objBEL.Oraganization);
             cmd.Parameters.AddWithValue("@Year", objBEL.Year);
-            cmd.Parameters.AddWithValue("@CoopAdvisor", objBEL.CoopAdvisor);
+            cmd.Parameters.AddWithValue("@AdvisorName", objBEL.AdvisorName);
             cmd.Parameters.AddWithValue("@JobTitle", objBEL.JobTitle);
             cmd.Parameters.AddWithValue("@ReportMonth", objBEL.ReportMonth);
             cmd.Parameters.AddWithValue("@LikeIntership", objBEL.LikeIntership);
