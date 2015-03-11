@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -43,13 +43,14 @@ public partial class CoopAdvisor_SelectedStudent : System.Web.UI.Page
             gdvSelectdReport.DataBind();
         }
     }
-    protected void gdvSelectdReport_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void gdvSelectdReport_RowCommand1(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "View") {
+        if (e.CommandName == "View")
+        {
             Response.Redirect("IndividualReport.aspx?ID=" + e.CommandArgument.ToString());
         }
     }
-    protected void gdvEmployeeEvaForm_RowCommand(object sender, GridViewCommandEventArgs e)
+    protected void gdvEmployeeEvaForm_RowCommand1(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "View")
         {
