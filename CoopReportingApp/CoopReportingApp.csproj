@@ -71,7 +71,12 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\script.js" />
+<<<<<<< HEAD
     <Content Include="Student\StudentHome.aspx" />
+=======
+    <Content Include="StudentSubmissionForm.aspx" />
+    <Content Include="Student\student.aspx" />
+>>>>>>> a3e4b003ba499b0beff62d968c48b1101b92770c
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\full-slider.css" />
@@ -122,8 +127,32 @@
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Student\NewStudent.Master.cs">
       <DependentUpon>NewStudent.Master</DependentUpon>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Compile Include="StudentSubmissionForm.aspx.cs">
+      <DependentUpon>StudentSubmissionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentSubmissionForm.aspx.designer.cs">
+      <DependentUpon>StudentSubmissionForm.aspx</DependentUpon>
+=======
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+>>>>>>> d5babeb435bc9f641d6c2f43324bc18cab7d0c5b
+    </Compile>
+=======
+>>>>>>> 26fde4d88b2d4b7467e64c19e2354d004273c028
+    <Compile Include="Student\student.aspx.cs">
+      <DependentUpon>student.aspx</DependentUpon>
+>>>>>>> a3e4b003ba499b0beff62d968c48b1101b92770c
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\NewStudent.Master.designer.cs">
