@@ -3,7 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
     <h3>Employer Evalution Form</h3>
+    <div class="alert alert-danger" visible="false" id="errorMessage" runat="server">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Error!</strong> Please check values before submitting.
+    </div>
     <div class="row">
         <div class="col-md-6">
             <asp:Label ID="Label1" runat="server" Text="Student ID:"></asp:Label>
@@ -76,16 +81,14 @@
     </div>
     <hr />
     <p>
-        Interest in Work. The degree to which the student pursues goals with 
-
-commitment and takes pride inaccomplishments.
+        Interest in Work. The degree to which the student pursues goals with commitment and takes pride inaccomplishments.
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblInterestInWork" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -93,15 +96,14 @@ commitment and takes pride inaccomplishments.
     </div>
     <hr />
     <p>
-        Ability to Learn. The extent to which the student becomes proficient with job 
-duties and work processes.
+        Ability to Learn. The extent to which the student becomes proficient with job duties and work processes.
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblAbilityToLearn" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -118,7 +120,7 @@ own personal performance; strive for qualitywork; put forth extra effort to ensu
             <asp:RadioButtonList ID="rblQualityofWork" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -135,7 +137,7 @@ procedures, evaluate alternatives,and select the best course of action.
             <asp:RadioButtonList ID="rblProblemSolving" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -152,7 +154,7 @@ setting.
             <asp:RadioButtonList ID="rblTeamWork" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -169,7 +171,7 @@ the working environment.
             <asp:RadioButtonList ID="rblDependability" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -186,7 +188,7 @@ direction and constructive criticism.
             <asp:RadioButtonList ID="rblResponseToSupervision" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -203,7 +205,7 @@ previous experience.
             <asp:RadioButtonList ID="rblReflection" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -220,7 +222,7 @@ solutions and display flexibility in unique or demanding circumstances.
             <asp:RadioButtonList ID="rblResoursefulness" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -228,14 +230,15 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Ethical Behaviour
+        Ethical Behaviour.The extent to which the students behaviour demonstrates integrity and ethics in work and
+relationships.
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblEthicalBehaviour" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -243,14 +246,15 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Appreciation of Diversity
+        Appreciation of Diversity. The degree to which the student shows understanding and sensitivity to needs and
+differences of others (i.e. ethnicity, religion, language, etc.)
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblAppreciationofDiversity" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -258,14 +262,15 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Enterpreneurial Orientation
+        Enterpreneurial Orientation. The students demonstrated ability to take informed risks that demonstrate
+creativity and add value to the company.
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblEnterpreneurialOrientation" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -273,14 +278,14 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Written Communication
+        Written Communication. The extent to which the student demonstrates effective written communication.
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblWrittenCommunication" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -288,14 +293,15 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Oral Communiation
+        Oral Communiation.  The extent to which the student demonstrates effective oral communication.
+
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblOralCommuniation" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -303,14 +309,15 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Interpersonal Communication
+        Interpersonal Communication. The extent to which the student effectively listens, conveys, and receives ideas,
+information, and direction.
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblInterpersonalCommunication" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
@@ -318,24 +325,25 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        Overall PerformanceRating
+        Overall Performance Rating
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblOverallPerformanceRating" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Excellent" Value="Excellent"></asp:ListItem>
                 <asp:ListItem Text="Very Good" Value="Very Good"></asp:ListItem>
-                <asp:ListItem Text="Good" Value="Good"></asp:ListItem>
+                <asp:ListItem Text="Good" Value="Good" Selected="True"></asp:ListItem>
                 <asp:ListItem Text="Fair" Value="Fair"></asp:ListItem>
                 <asp:ListItem Text="Bad" Value="Bad"></asp:ListItem>
             </asp:RadioButtonList>
         </div>
     </div>
     <hr />
-    <p>Supervisors Comments:</p>
+    <p>Supervisors Comments -Please comment on the student’s overall job performance:</p>
     <asp:TextBox ID="txtSupervisorsComments" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
     <hr />
-    <p>Supervisors Recommendations:</p>
+    <p>Supervisors Recommendations- Please provide your recommendations for the student’s personal and/or
+professional development (optional): </p>
     <asp:TextBox ID="txtSupervisorsRecommendations" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
     <hr />
     <p>
@@ -346,7 +354,7 @@ solutions and display flexibility in unique or demanding circumstances.
             <asp:RadioButtonList ID="rblNextWorkTerm" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Yes" Value="Yes"></asp:ListItem>
                 <asp:ListItem Text="No" Value="No"></asp:ListItem>
-                <asp:ListItem Text="Not Applicable" Value="Not Applicable"></asp:ListItem>
+                <asp:ListItem Text="Not Applicable" Value="Not Applicable" Selected="True"></asp:ListItem>
             </asp:RadioButtonList>
         </div>
     </div>
@@ -358,8 +366,8 @@ solutions and display flexibility in unique or demanding circumstances.
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblOfferNextWorkTerm" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Yes" Value="Yes"></asp:ListItem>
-                <asp:ListItem Text="No" Value="No"></asp:ListItem>
-                <asp:ListItem Text="To be determined" Value="To be determined"></asp:ListItem>
+                <asp:ListItem Text="No" Value="No" Selected="True"></asp:ListItem>
+                <asp:ListItem Text="To be determined" Value="To be determined" ></asp:ListItem>
             </asp:RadioButtonList>
         </div>
     </div>
@@ -371,7 +379,7 @@ solutions and display flexibility in unique or demanding circumstances.
         <div class="col-md-2" aria-orientation="vertical">
             <asp:RadioButtonList ID="rblOfferStatus" runat="server" RepeatDirection="Horizontal" Width="1000px">
                 <asp:ListItem Text="Accepted" Value="Accepted"></asp:ListItem>
-                <asp:ListItem Text="Declined" Value="Declined"></asp:ListItem>
+                <asp:ListItem Text="Declined" Value="Declined" Selected="True"></asp:ListItem>
             </asp:RadioButtonList>
         </div>
     </div>
@@ -397,21 +405,29 @@ solutions and display flexibility in unique or demanding circumstances.
         <div class="col-md-6">
             <asp:Label ID="Label8" runat="server" Text="Supervisors Name:"></asp:Label>
             <asp:TextBox ID="txtSupervisorsName" placeholder="Supervisors Name" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ErrorMessage="Invalid Supervisor Name" Display="Dynamic" ForeColor="Red"
+                ValidationExpression="[A-Za-z./ ]+$" ControlToValidate="txtSupervisorsName" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
         </div>
         <div class="col-md-6">
             <asp:Label ID="Label11" runat="server" Text="Supervisors Title:"></asp:Label>
             <asp:TextBox ID="txtSupervisorsTitle" placeholder="Supervisors Title" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ErrorMessage="Invalid Title Name" Display="Dynamic" ForeColor="Red"
+                ValidationExpression="[A-Za-z./ ]+$" ControlToValidate="txtSupervisorsTitle" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <asp:Label ID="Label10" runat="server" Text="Manager Name:"></asp:Label>
             <asp:TextBox ID="txtmanagerName" placeholder="Manager Name" CssClass="form-control" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ErrorMessage="Manager Name Required" ForeColor="Red" ControlToValidate="txtmanagerName"
+                runat="server" EnableClientScript="False" SetFocusOnError="True" />
+            <asp:RegularExpressionValidator ErrorMessage="Invalid Managers Name" Display="Dynamic" ForeColor="Red"
+                ValidationExpression="[A-Za-z./ ]+$" ControlToValidate="txtmanagerName" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
         </div>
         <div class="col-md-6">
             <asp:Label ID="Label13" runat="server" Text="Submitted Date:"></asp:Label>
             <asp:TextBox ID="txtSubmittedDate" placeholder="MM/DD/YYYY" CssClass="form-control" runat="server"></asp:TextBox>
-        </div>
+         </div>        
     </div>
     <hr />
     <div align="center">
