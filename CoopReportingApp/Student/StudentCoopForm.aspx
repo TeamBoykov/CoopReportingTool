@@ -40,7 +40,7 @@
                 <asp:ListItem>2023</asp:ListItem>
                 <asp:ListItem>2024</asp:ListItem>
                 <asp:ListItem>2025</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
+             
             </asp:DropDownList>
             <asp:RequiredFieldValidator InitialValue="0" ErrorMessage="Year Required" ForeColor="Red" ControlToValidate="ddlYear"
                 runat="server" EnableClientScript="False" SetFocusOnError="True" />
@@ -60,7 +60,7 @@
                 <asp:ListItem>October</asp:ListItem>
                 <asp:ListItem>November</asp:ListItem>
                 <asp:ListItem>December</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
+               
             </asp:DropDownList>
             <asp:RequiredFieldValidator InitialValue="0" ErrorMessage="Month Required" ForeColor="Red" ControlToValidate="ddlRmonth"
                 runat="server" EnableClientScript="False" SetFocusOnError="True" />
