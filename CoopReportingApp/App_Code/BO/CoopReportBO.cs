@@ -17,8 +17,9 @@ public class CoopReportBO
     public int Id { get; set; }
     public string StudentName { get; set; }
     public Int64 StudentID { get; set; }
-    public string CoopAdvisor { get; set; }
+    public string AdvisorName { get; set; }
     public string Oraganization { get; set; }
+    public string Year { get; set; }
     public string ReportMonth { get; set; }
     public string JobTitle { get; set; }
     public string LikeIntership { get; set; }
@@ -61,5 +62,28 @@ public class CoopReportBO
     public System.Data.DataSet ReportByStudentIDandMonth()
     {
         return CoopReportDAL.ReportaByStudentIDandMonth(StudentID,ReportMonth);
+    }
+
+    public System.Data.DataSet IndividualReport()
+    {
+        return CoopReportDAL.IndividualReport(Id);
+    }
+
+    //BO Method for Inserting Student Coop Form Data
+    public int SubmitForm(CoopReportBO objBel)
+    {
+        CoopReportDAL objDal = new CoopReportDAL();
+        try
+        {
+            return objDal.SubmitForm(objBel);
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            objDal = null;
+        }
     }
 }

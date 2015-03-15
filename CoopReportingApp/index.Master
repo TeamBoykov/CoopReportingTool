@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="CoopReportingApp.index" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="index.master.cs" Inherits="CoopReportingApp.index" %>
 
 <!DOCTYPE html>
 
@@ -26,6 +26,7 @@
                         <li role="presentation"><a href="http://www.centennialcollege.ca" target="_blank">Home</a></li>
                         <li role="presentation"><a href="index.aspx">Login</a></li>
                         <li role="presentation"><a href="Registration.aspx">Registration</a></li>
+                        <li role="presentation"><a href="Student/StudentCoopForm.aspx">Monthly Coop Report</a></li>
                     </ul>
                 </nav>
             </header>
