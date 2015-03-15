@@ -74,7 +74,6 @@
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\full-slider.css" />
-    <Content Include="WebAdmin\WebAdminPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,13 +119,6 @@
     </Compile>
     <Compile Include="Student\student.Master.designer.cs">
       <DependentUpon>student.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebAdmin\WebAdminPage.aspx.cs">
-      <DependentUpon>WebAdminPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebAdmin\WebAdminPage.aspx.designer.cs">
-      <DependentUpon>WebAdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebAdmin\webadmin.Master.cs">
       <DependentUpon>webadmin.Master</DependentUpon>
