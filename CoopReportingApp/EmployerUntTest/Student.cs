@@ -8,6 +8,43 @@ namespace EmployerUntTest
     {
         CoopReportBO objCoopReport = new CoopReportBO();
         [TestMethod]
+
+        public void SubmitStudentTest()
+        {
+            CoopReportBO objBEL = new CoopReportBO();
+
+            objBEL.AboutCoopAdvisor = "Yes";
+            objBEL.AdequatelyPrepared = "Yes";
+            objBEL.AdvisorName = "Mealanie";
+            objBEL.AgencySupervisor = "";
+            objBEL.Attendance = "Yes";
+            objBEL.Comments = "Good Job";
+            objBEL.Curriculum = "Yes";
+            objBEL.DutiesPerformed = "KannanLal";
+            objBEL.Expectation = "Yes";
+            objBEL.HelpProblems = "Yes";
+            objBEL.JobTitle = "Test Analyst";
+            objBEL.Learning = "Yes";
+            objBEL.LikeIntership = "Yes";
+            objBEL.ObjectiveEstablished = "Yes";
+            objBEL.Oraganization = "HSBC";
+            objBEL.OverStructured = "Yes";
+            objBEL.Problems = "Yes";
+            objBEL.Punctuality = "Yes";
+            objBEL.Recommend = "I will recommend";
+            objBEL.ReportMonth = "Feburary";
+            objBEL.Requirement = "Yes";
+            objBEL.Rewarding = "Yes";
+            objBEL.SelfEvaluation = "Yes";
+            objBEL.Structured = "Yes";
+            objBEL.StudentID = int.Parse("300262626");
+            objBEL.StudentName = "Raj";
+            objBEL.SupervisorActive = "Yes";
+            objBEL.Year = "2015";
+
+            objBEL.SubmitForm(objBEL);
+
+        }
         public void AllStudentCoopReports()
         {
             var ds = objCoopReport.AllStudentCoopReports();

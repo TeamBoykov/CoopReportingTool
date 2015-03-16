@@ -8,6 +8,50 @@ namespace EmployerUntTest
     {
         EmployerEvaFormBO objEMPEval = new EmployerEvaFormBO();
         [TestMethod]
+
+        public void SubmitFormTest()
+        {
+            //Parameters
+            EmployerEvaFormBO objBEL = new EmployerEvaFormBO();
+
+            objBEL.AbilityToLearn = "Good";
+            objBEL.AppreciationofDiversity = "Good";
+            objBEL.Currentdate = DateTime.Parse("2015-03-16");
+            objBEL.Dependability = "Bad";
+            objBEL.EnterpreneurialOrientation = "Good";
+            objBEL.EthicalBehaviour = "Bad";
+            objBEL.InterestInWork = "Good";
+            objBEL.InterpersonalCommunication = "Fair";
+            objBEL.JobTitle = "Devloper";
+            objBEL.ManagerName = "Jon";
+            objBEL.NextWorkTerm = "Yes";
+            objBEL.NextWorkTermFrom = DateTime.Parse("2015-03-16");
+            objBEL.NextWorkTermTo = DateTime.Parse("2015-03-16");
+            objBEL.OfferNextWorkTerm = "Yes";
+            objBEL.OfferStatus = "Yes";
+            objBEL.OralCommuniation = "Good";
+            objBEL.Organization = "CIBC";
+            objBEL.OverallPerformanceRating = "Exceptional";
+            objBEL.ProblemSolving = "Good";
+            objBEL.QualityofWork = "Good";
+            objBEL.Reflection = "Good";
+            objBEL.Resoursefulness = "Good";
+            objBEL.ResponseToSupervision = "Good";
+            objBEL.StudentId = int.Parse("300756756");
+            objBEL.StudentName = "Dipen";
+            objBEL.SupervisorsComments = "Excellent team player and good in communication";
+            objBEL.SupervisorsName = "Jake";
+            objBEL.SupervisorsRecommendations = "Keep working the same way";
+            objBEL.SupervisorsTitle = "Customer";
+            objBEL.TeamWork = "Very good";
+            objBEL.Term = "Spring";
+            objBEL.WrittenCommunication = "Good";
+            objBEL.year = int.Parse("1997");
+            objBEL.SubmitEmployerForm(objBEL);
+
+
+          
+        }
         public void EMPEvalForm() {
             objEMPEval.StudentId = 300718286;
             var ds = objEMPEval.EmpEvalutionForm();
