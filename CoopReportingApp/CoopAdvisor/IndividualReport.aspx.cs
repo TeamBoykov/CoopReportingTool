@@ -25,7 +25,7 @@ public partial class CoopAdvisor_IndividualReport : System.Web.UI.Page
         {
             lblStudentId.Text = ds.Tables[0].Rows[0]["StudentId"].ToString();
             lblStudentName.Text = ds.Tables[0].Rows[0]["StudentName"].ToString();
-            lblCoopAdivisorName.Text = ds.Tables[0].Rows[0]["CoopAdvisor"].ToString();
+            lblCoopAdivisorName.Text = ds.Tables[0].Rows[0]["AdvisorName"].ToString();
             lblOraganization.Text = ds.Tables[0].Rows[0]["Oraganization"].ToString();
             lblReportMonth.Text = ds.Tables[0].Rows[0]["ReportMonth"].ToString();
             lblJobTitle.Text = ds.Tables[0].Rows[0]["JobTitle"].ToString();
