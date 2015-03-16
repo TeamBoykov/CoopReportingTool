@@ -61,7 +61,7 @@ public class CoopReportBO
 
     public System.Data.DataSet ReportByStudentIDandMonth()
     {
-        return CoopReportDAL.ReportaByStudentIDandMonth(StudentID,ReportMonth);
+        return CoopReportDAL.ReportaByStudentIDandMonth(StudentID,ReportMonth,Year);
     }
 
     public System.Data.DataSet IndividualReport()

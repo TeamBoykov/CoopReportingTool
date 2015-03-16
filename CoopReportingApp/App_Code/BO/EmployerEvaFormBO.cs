@@ -45,8 +45,8 @@ public class EmployerEvaFormBO
     public string OfferNextWorkTerm { get; set; }
     public string OfferStatus { get; set; }
     
-    public DateTime NextWorkTermFrom { get; set; }
-    public DateTime NextWorkTermTo { get; set; }
+    public string NextWorkTermFrom { get; set; }
+    public string NextWorkTermTo { get; set; }
     public string SupervisorsName { get; set; }
     public string SupervisorsTitle { get; set; }
     public DateTime Currentdate { get; set; }
@@ -60,5 +60,21 @@ public class EmployerEvaFormBO
     public System.Data.DataSet IndividualEvalutionForm()
     {
         return EmployerEvalFromDAL.IndividualEvalutionForm(Id);
+    }
+    public int SubmitEmployerForm(EmployerEvaFormBO objBel)
+    {
+        EmployerEvalFromDAL objDal = new EmployerEvalFromDAL();
+        try
+        {
+            return objDal.SubmitEmployerForm(objBel);
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            objDal = null;
+        }
     }
 }

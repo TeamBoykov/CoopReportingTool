@@ -5,11 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h3>Filter Coop Reports</h3>
     <div class="row">
-        <div class="col-xs-6 col-md-4">
+        <div class="col-xs-6 col-md-3">
             <asp:TextBox ID="txtStudentID" CssClass="form-control" placeholder="Student ID" runat="server"></asp:TextBox>
         </div>
 
-        <div class="col-xs-6 col-md-4">
+        <div class="col-xs-6 col-md-3">
             <asp:DropDownList ID="ddlReportMonth" CssClass="form-control" runat="server">
                 <asp:ListItem>Select Month</asp:ListItem>
                 <asp:ListItem>January</asp:ListItem>
@@ -26,7 +26,25 @@
                 <asp:ListItem>December</asp:ListItem>
             </asp:DropDownList>
         </div>
-        <div class="col-xs-6 col-md-4">
+        
+        <div class="col-xs-6 col-md-3">
+            <asp:DropDownList ID="ddlYear" CssClass="form-control" runat="server">
+                <asp:ListItem>Select Year</asp:ListItem>
+                <asp:ListItem>2015</asp:ListItem>
+                <asp:ListItem>2016</asp:ListItem>
+                <asp:ListItem>2017</asp:ListItem>
+                <asp:ListItem>2018</asp:ListItem>
+                <asp:ListItem>2019</asp:ListItem>
+                <asp:ListItem>2020</asp:ListItem>
+                <asp:ListItem>2021</asp:ListItem>
+                <asp:ListItem>2022</asp:ListItem>
+                <asp:ListItem>2023</asp:ListItem>
+                <asp:ListItem>2024</asp:ListItem>
+                <asp:ListItem>2025</asp:ListItem>
+                <asp:ListItem>2026</asp:ListItem>
+            </asp:DropDownList>
+        </div>
+        <div class="col-xs-6 col-md-3">
             <asp:Button ID="btnFilter" runat="server" Text="Filter" CssClass="btn btn-primary" OnClick="btnFilter_Click" />
         </div>
     </div>
@@ -46,9 +64,10 @@
                 <ControlStyle CssClass="btn-success"></ControlStyle>
             </asp:HyperLinkField>
             <asp:BoundField DataField="StudentName" HeaderText="Student Name" />
-            <asp:BoundField DataField="CoopAdvisor" HeaderText="CoopAdvisor Name" />
+            <asp:BoundField DataField="AdvisorName" HeaderText="AdvisorName" />
             <asp:BoundField DataField="Oraganization" HeaderText="Oraganization" />
             <asp:BoundField DataField="ReportMonth" HeaderText="Report Month" />
+            <asp:BoundField DataField="Year" HeaderText="Year" />
             <asp:BoundField DataField="JobTitle" HeaderText="Job Title" />
         </Columns>
         <RowStyle />

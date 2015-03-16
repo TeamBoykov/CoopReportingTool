@@ -14,7 +14,7 @@
             <asp:BoundField DataField="Id" HeaderText="S.No" />
             <asp:BoundField DataField="StudentID" HeaderText="Student ID" />
             <asp:BoundField DataField="StudentName" HeaderText="Student Name" />
-            <asp:BoundField DataField="CoopAdvisor" HeaderText="CoopAdvisor Name" />
+            <asp:BoundField DataField="AdvisorName" HeaderText="Advisor Name" />
             <asp:BoundField DataField="Oraganization" HeaderText="Oraganization" />
             <asp:BoundField DataField="ReportMonth" HeaderText="Report Month" />
             <asp:BoundField DataField="JobTitle" HeaderText="Job Title" />

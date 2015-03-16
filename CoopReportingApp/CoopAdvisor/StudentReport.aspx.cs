@@ -57,6 +57,7 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
             //filter gridview data using both student_id and month name
             ObjCoopReportBO.StudentID = Convert.ToInt64(txtStudentID.Text);
             ObjCoopReportBO.ReportMonth = ddlReportMonth.SelectedItem.ToString();
+            ObjCoopReportBO.Year = ddlYear.SelectedItem.ToString();
             DataSet ds = new DataSet();
             ds = ObjCoopReportBO.ReportByStudentIDandMonth();
             if (ds.Tables[0].Rows.Count > 0)

@@ -76,12 +76,13 @@ public class CoopReportDAL
         }
     }
 
-    internal static DataSet ReportaByStudentIDandMonth(long StudentID, string ReportMonth)
+    internal static DataSet ReportaByStudentIDandMonth(long StudentID, string ReportMonth,string Year)
     {
         SqlDataAdapter da = new SqlDataAdapter("Sp_CoopForm", SqlCon);
         da.SelectCommand.CommandType = CommandType.StoredProcedure;
         da.SelectCommand.Parameters.AddWithValue("@StudentID", StudentID);
         da.SelectCommand.Parameters.AddWithValue("@ReportMonth", ReportMonth);
+        da.SelectCommand.Parameters.AddWithValue("@Year", Year);
         da.SelectCommand.Parameters.AddWithValue("@Type", "SM");
         DataSet ds = new DataSet();
         da.Fill(ds);
