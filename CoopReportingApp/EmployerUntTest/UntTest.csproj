@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="App_Code">
-      <HintPath>..\..\..\..\..\..\..\CoopPublish\bin\App_Code.dll</HintPath>
+      <HintPath>C:\Users\Swami\Desktop\Testpublish\bin\App_Code.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
