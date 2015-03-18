@@ -34,7 +34,7 @@ public partial class CoopAdvisor_SelectedStudent : System.Web.UI.Page
 
     private void SelectedStudentReport()
     {
-        ObjCoopReportBO.StudentID = Convert.ToInt64(Request.QueryString["StudentID"].ToString());
+        ObjCoopReportBO.StudentID = int.Parse(Request.QueryString["StudentID"].ToString());
         DataSet ds = new DataSet();
         ds = ObjCoopReportBO.ReportByStudentID();
         if (ds.Tables[0].Rows.Count > 0)

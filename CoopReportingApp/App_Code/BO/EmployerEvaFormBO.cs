@@ -43,16 +43,10 @@ public class EmployerEvaFormBO
     public string SupervisorsRecommendations { get; set; }
     public string NextWorkTerm { get; set; }
     public string OfferNextWorkTerm { get; set; }
-<<<<<<< HEAD
     public string OfferStatus { get; set; }
     
     public string NextWorkTermFrom { get; set; }
     public string NextWorkTermTo { get; set; }
-=======
-    public string OfferStatus { get; set; }    
-    public DateTime NextWorkTermFrom { get; set; }
-    public DateTime NextWorkTermTo { get; set; }
->>>>>>> 64168a5eb97492893baff050f5d9376649c0862a
     public string SupervisorsName { get; set; }
     public string SupervisorsTitle { get; set; }
     public DateTime Currentdate { get; set; }
@@ -67,24 +61,10 @@ public class EmployerEvaFormBO
     {
         return EmployerEvalFromDAL.IndividualEvalutionForm(Id);
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 64168a5eb97492893baff050f5d9376649c0862a
-    public int SubmitEmployerForm(EmployerEvaFormBO objBel)
+
+    public System.Data.DataSet InsertEmpEvalForm(EmployerEvaFormBO ObjEmployerBO)
     {
-        EmployerEvalFromDAL objDal = new EmployerEvalFromDAL();
-        try
-        {
-            return objDal.SubmitEmployerForm(objBel);
-        }
-        catch (Exception ex)
-        {
-            throw ex;
-        }
-        finally
-        {
-            objDal = null;
-        }
+        return EmployerEvalFromDAL.InsertEmpEvalForm(ObjEmployerBO);
     }
 }

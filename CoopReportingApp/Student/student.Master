@@ -23,11 +23,11 @@
                 </div>
                 <nav>
                     <ul class="nav nav-pills">
-                        <li role="presentation"><a href="#">Student Home</a></li>
-                        <li role="presentation"><a href="#">Profile</a></li>
-                        <li role="presentation"><a href="#">Work History</a></li>
-                        <li role="presentation"><a href="#">Company</a></li>
-                        <li role="presentation"><a href="StudentCoopForm.aspx">Student Coop Report</a></li>
+                        <li role="presentation"><a href="StudentHome.aspx">Student Home</a></li>
+                       <%-- <li role="presentation"><a href="#">Profile</a></li>
+                        <li role="presentation"><a href="#">Work History</a></li><a href="student.Master">student.Master</a>
+                        <li role="presentation"><a href="#">Company</a></li>--%>
+                        <li role="presentation"><a href="StudentCoopReport.aspx">Student Coop Report</a></li>
                         <li role="presentation"><a href="../EmployerForm.aspx">Employer Evalution Form</a></li>
                         <li role="presentation"><a href="../CoopAdvisor/StudentReport.aspx">View Student Reports</a></li>
                     </ul>

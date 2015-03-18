@@ -1,53 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h3>Student Coop Report</h3>
-    <div class="alert alert-danger" visible="false" id="errorMessage" runat="server">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Error!</strong> Please check values before submitting.
+    <div class="row">
+        <div class="col-md-12">
+            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <asp:TextBox ID="txtSId" CssClass="form-control" placeholder="StudentID" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ErrorMessage="Student Id Required" ForeColor="Red" ControlToValidate="txtSId"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
-            <asp:RegularExpressionValidator ErrorMessage="Invalid Student ID" Display="Dynamic" ForeColor="Red"
-                ValidationExpression="\d\d\d\d\d\d\d\d\d" ControlToValidate="txtSId" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
-         </div>
+            <asp:TextBox ID="txtSId" CssClass="form-control" placeholder="StudentID" runat="server" MaxLength="9"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSId"
+                ErrorMessage="StudentId Required" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtSId"
+                ErrorMessage="StudentId should be numbers" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"
+                ValidationExpression="^[0-9/ ]+$"></asp:RegularExpressionValidator>
+        </div>
         <div class="col-md-6">
             <asp:TextBox ID="txtSName" CssClass="form-control" placeholder="Student Name" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ErrorMessage="Student Name Required" ForeColor="Red" ControlToValidate="txtSName"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
-            <asp:RegularExpressionValidator ErrorMessage="Invalid Student Name" Display="Dynamic" ForeColor="Red"
-                ValidationExpression="[A-Za-z./ ]+$" ControlToValidate="txtSName" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
-        </div>        
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtSName"
+                ErrorMessage="Name Required" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtSName"
+                ErrorMessage="Plz,EnterCharactersOnly" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"
+                ValidationExpression="^[A-Za-z./ ]+$"></asp:RegularExpressionValidator>
+        </div>
     </div>
     <div class="row">
+
         <div class="col-md-6">
-            <asp:DropDownList ID="ddlYear" CssClass="form-control" runat="server">
-                <asp:ListItem Text="Select Year" Value="0"> </asp:ListItem>
-                <asp:ListItem>2015</asp:ListItem>
-                <asp:ListItem>2016</asp:ListItem>
-                <asp:ListItem>2017</asp:ListItem>
-                <asp:ListItem>2018</asp:ListItem>
-                <asp:ListItem>2019</asp:ListItem>
-                <asp:ListItem>2020</asp:ListItem>
-                <asp:ListItem>2021</asp:ListItem>
-                <asp:ListItem>2022</asp:ListItem>
-                <asp:ListItem>2023</asp:ListItem>
-                <asp:ListItem>2024</asp:ListItem>
-                <asp:ListItem>2025</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
-            </asp:DropDownList>
-            <asp:RequiredFieldValidator InitialValue="0" ErrorMessage="Year Required" ForeColor="Red" ControlToValidate="ddlYear"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
-            </div>
-        <div class="col-md-6">
-            <asp:DropDownList ID="ddlRmonth" CssClass="form-control" runat="server">
-                <asp:ListItem Text="Choose Month" Value="0"> </asp:ListItem>
+            <asp:DropDownList ID="ddlRmonth" CssClass="form-control" Operator="NotEqual" runat="server">
+                <asp:ListItem>Choose Month</asp:ListItem>
                 <asp:ListItem>January</asp:ListItem>
                 <asp:ListItem>February</asp:ListItem>
                 <asp:ListItem>March</asp:ListItem>
@@ -60,37 +44,56 @@
                 <asp:ListItem>October</asp:ListItem>
                 <asp:ListItem>November</asp:ListItem>
                 <asp:ListItem>December</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
+
             </asp:DropDownList>
-            <asp:RequiredFieldValidator InitialValue="0" ErrorMessage="Month Required" ForeColor="Red" ControlToValidate="ddlRmonth"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
+            <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Choose Month"
+                ControlToValidate="ddlRmonth" Font-Size="X-Small" ForeColor="red"
+                Operator="NotEqual" SetFocusOnError="True" ValueToCompare="Choose Year"></asp:CompareValidator>
         </div>
-        
+        <div class="col-md-6">
+            <asp:DropDownList ID="ddlYear" CssClass="form-control" Operator="NotEqual" runat="server">
+                <asp:ListItem>Select Year</asp:ListItem>
+                <asp:ListItem>2015</asp:ListItem>
+                <asp:ListItem>2016</asp:ListItem>
+                <asp:ListItem>2017</asp:ListItem>
+                <asp:ListItem>2018</asp:ListItem>
+                <asp:ListItem>2019</asp:ListItem>
+                <asp:ListItem>2020</asp:ListItem>
+                <asp:ListItem>2021</asp:ListItem>
+                <asp:ListItem>2022</asp:ListItem>
+                <asp:ListItem>2023</asp:ListItem>
+                <asp:ListItem>2024</asp:ListItem>
+                <asp:ListItem>2025</asp:ListItem>
+            </asp:DropDownList>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Select year"
+                ControlToValidate="ddlYear" Font-Size="X-Small" ForeColor="red"
+                Operator="NotEqual" SetFocusOnError="True" ValueToCompare="Select Year"></asp:CompareValidator>
+        </div>
+
     </div>
     <div class="row">
         <div class="col-md-6">
             <asp:TextBox ID="txtOrg" CssClass="form-control" placeholder="Organization" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ErrorMessage="Organization Name Required" Display="Dynamic" ForeColor="Red" ControlToValidate="txtOrg"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
-            <asp:RegularExpressionValidator ErrorMessage="Invalid Organization Name" Display="Dynamic" ForeColor="Red"
-                ValidationExpression="^[A-Za-z./ ]+$" ControlToValidate="txtOrg" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtOrg"
+                ErrorMessage="Organization Name is Required" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
         </div>
-         <div class="col-md-6">
+        <div class="col-md-6">
             <asp:TextBox ID="txtCoopAdvisorName" CssClass="form-control" placeholder="Advisor Name" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ErrorMessage="Advisor Name Required" ForeColor="Red" ControlToValidate="txtCoopAdvisorName"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
-            <asp:RegularExpressionValidator ErrorMessage="Invalid Advisor Name" Display="Dynamic" ForeColor="Red"
-                ValidationExpression="[A-Za-z./ ]+$" ControlToValidate="txtCoopAdvisorName" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCoopAdvisorName"
+                ErrorMessage="Coop Advisor Name is Required" ForeColor="Red" Font-Size="X-Small"
+                SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCoopAdvisorName"
+                ErrorMessage="Plz,EnterCharactersOnly" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"
+                ValidationExpression="^[A-Za-z./ ]+$"></asp:RegularExpressionValidator>
         </div>
         <div class="col-md-6">
 
             <asp:TextBox ID="txtJTitle" CssClass="form-control" placeholder="Job Tiltle" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ErrorMessage="Job Title Required" ForeColor="Red" ControlToValidate="txtJTitle"
-                runat="server" EnableClientScript="False" SetFocusOnError="True" />
-            <asp:RegularExpressionValidator ErrorMessage="Invalid Job Name" Display="Dynamic" ForeColor="Red"
-                ValidationExpression="^[A-Za-z./ ]+$" ControlToValidate="txtJTitle" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtJTitle"
+                ErrorMessage="Job title is Required" ForeColor="Red" Font-Size="X-Small"
+                SetFocusOnError="True"></asp:RequiredFieldValidator>
         </div>
-        </div>
+    </div>
 
 
     <p>1. Do you like your internship?</p>
@@ -265,6 +268,7 @@
     <p>
         14. Have you received help with intern-related problems from sources other than your faculty and
 agencysupervisor? 
+   
     </p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
@@ -351,9 +355,9 @@ agencysupervisor?
     <hr />
 
     <div align="center">
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click"  />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click" />
         <asp:Button ID="btnClear" runat="server" CausesValidation="False"
-            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" OnClick="btnClear_Click" />
+            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" />
     </div>
     <br />
 </asp:Content>
