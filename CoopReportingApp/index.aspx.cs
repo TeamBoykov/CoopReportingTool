@@ -4,62 +4,60 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 public partial class index : System.Web.UI.Page
 {
+    CoopReportBO objCoopReportBO = new CoopReportBO();
+    DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            txtSId.Focus();
+        }
     }
     CoopReportBO ObjCoopReportBO = new CoopReportBO();
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        Submitform();
-        //  MessageBox.Show();
-    }
-
-    //Insert C# Code for StudentCoop Form
-    protected void Submitform()
-    {
-
-        if (string.IsNullOrEmpty(txtSId.Text) && string.IsNullOrEmpty(txtSId.Text))
+        objCoopReportBO.StudentID = int.Parse(txtSId.Text);
+        objCoopReportBO.StudentName = txtSName.Text;
+        objCoopReportBO.AdvisorName = txtCoopAdvisorName.Text;
+        objCoopReportBO.Oraganization = txtOrg.Text;
+        objCoopReportBO.Year = int.Parse(ddlYear.SelectedItem.ToString());
+        objCoopReportBO.ReportMonth = ddlRmonth.SelectedItem.ToString();
+        objCoopReportBO.JobTitle = txtJTitle.Text;
+        objCoopReportBO.LikeIntership = rblIntership.SelectedItem.Value;
+        objCoopReportBO.AboutCoopAdvisor = rblCoopAdvisor.SelectedItem.Value;
+        objCoopReportBO.AdequatelyPrepared = rblAdequately.SelectedItem.Value;
+        objCoopReportBO.AgencySupervisor = rblAgencySupervisor.SelectedItem.Value;
+        objCoopReportBO.Attendance = rblAttendance.SelectedItem.Value;
+        objCoopReportBO.Curriculum = rblCurriculum.SelectedItem.Value;
+        objCoopReportBO.Expectation = rblExpectation.SelectedItem.Value;
+        objCoopReportBO.HelpProblems = rblHelpProblems.SelectedItem.Value;
+        objCoopReportBO.Learning = rblLearning.SelectedItem.Value;
+        objCoopReportBO.ObjectiveEstablished = rblObjectiveEstablished.SelectedItem.Value;
+        objCoopReportBO.OverStructured = rblOverStructured.SelectedItem.Value;
+        objCoopReportBO.Problems = rblProblems.SelectedItem.Value;
+        objCoopReportBO.Punctuality = rblPunctuality.SelectedItem.Value;
+        objCoopReportBO.Recommend = rblRecommend.SelectedItem.Value;
+        objCoopReportBO.Requirement = rblRequirements.SelectedItem.Value;
+        objCoopReportBO.Rewarding = rblRewarding.SelectedItem.Value;
+        objCoopReportBO.SelfEvaluation = rblSelfEvaluation.SelectedItem.Value;
+        objCoopReportBO.Structured = rblStructured.SelectedItem.Value;
+        objCoopReportBO.SupervisorActive = rblSupervisorActive.SelectedItem.Value;
+        ds = objCoopReportBO.InsertCoopReport(objCoopReportBO);
+        if (ds.Tables.Count > 0)
         {
-            errorMessage.Visible = true;
-            return;
+            lblMessage.ForeColor = System.Drawing.Color.Green;
+            lblMessage.Text = txtSName.Text + ":Report submitted successfully for" + ddlRmonth.SelectedItem.ToString() + " Month";
+
         }
-
-        ObjCoopReportBO.StudentID = Int64.Parse(txtSId.Text);
-        ObjCoopReportBO.StudentName = txtSName.Text;
-        ObjCoopReportBO.JobTitle = txtJTitle.Text;
-        ObjCoopReportBO.Year = ddlYear.Text;
-        ObjCoopReportBO.ReportMonth = ddlRmonth.SelectedItem.Text;
-        ObjCoopReportBO.Oraganization = txtOrg.Text;
-        ObjCoopReportBO.AdvisorName = txtCoopAdvisorName.Text;
-        ObjCoopReportBO.Comments = txtComments.Text;
-        ObjCoopReportBO.DutiesPerformed = txtDutiesPerformed.Text;
-        ObjCoopReportBO.LikeIntership = rblIntership.SelectedItem.Value;
-        ObjCoopReportBO.AboutCoopAdvisor = rblCoopAdvisor.SelectedItem.Value;
-        ObjCoopReportBO.AdequatelyPrepared = rblAdequately.SelectedItem.Value;
-        ObjCoopReportBO.AgencySupervisor = rblAgencySupervisor.SelectedItem.Value;
-        ObjCoopReportBO.Attendance = rblAttendance.SelectedItem.Value;
-        ObjCoopReportBO.Curriculum = rblCurriculum.SelectedItem.Value;
-        ObjCoopReportBO.Expectation = rblExpectation.SelectedItem.Value;
-        ObjCoopReportBO.HelpProblems = rblHelpProblems.SelectedItem.Value;
-        ObjCoopReportBO.Learning = rblLearning.SelectedItem.Value;
-        ObjCoopReportBO.ObjectiveEstablished = rblObjectiveEstablished.SelectedItem.Value;
-        ObjCoopReportBO.OverStructured = rblOverStructured.SelectedItem.Value;
-        ObjCoopReportBO.Problems = rblProblems.SelectedItem.Value;
-        ObjCoopReportBO.Punctuality = rblPunctuality.SelectedItem.Value;
-        ObjCoopReportBO.Recommend = rblRecommend.SelectedItem.Value;
-        ObjCoopReportBO.Requirement = rblRequirements.SelectedItem.Value;
-        ObjCoopReportBO.Rewarding = rblRewarding.SelectedItem.Value;
-        ObjCoopReportBO.SelfEvaluation = rblSelfEvaluation.SelectedItem.Value;
-        ObjCoopReportBO.Structured = rblStructured.SelectedItem.Value;
-        ObjCoopReportBO.SupervisorActive = rblSupervisorActive.SelectedItem.Value;
-
-        ObjCoopReportBO.SubmitForm(ObjCoopReportBO);
-        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
-
+        else
+        {
+            lblMessage.ForeColor = System.Drawing.Color.Red;
+            lblMessage.Text = "Report already submitted for" + ddlRmonth.SelectedItem.ToString() + " Month";
+        }
     }
 
     //Content Clear backend Code
@@ -93,7 +91,7 @@ public partial class index : System.Web.UI.Page
         rblSelfEvaluation.Text = "";
         rblStructured.Text = "";
         rblSupervisorActive.Text = "";
-        errorMessage.Visible = false;
+        lblMessage.Text = "";
 
-    }    
+    }
 }

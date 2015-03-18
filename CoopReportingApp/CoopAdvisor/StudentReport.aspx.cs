@@ -55,9 +55,9 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
         else
         {
             //filter gridview data using both student_id and month name
-            ObjCoopReportBO.StudentID = Convert.ToInt64(txtStudentID.Text);
+            ObjCoopReportBO.StudentID = int.Parse(txtStudentID.Text);
             ObjCoopReportBO.ReportMonth = ddlReportMonth.SelectedItem.ToString();
-            ObjCoopReportBO.Year = ddlYear.SelectedItem.ToString();
+            ObjCoopReportBO.Year = int.Parse(ddlYear.SelectedItem.ToString());
             DataSet ds = new DataSet();
             ds = ObjCoopReportBO.ReportByStudentIDandMonth();
             if (ds.Tables[0].Rows.Count > 0)
@@ -73,7 +73,7 @@ public partial class CoopAdvisor_StudentReport : System.Web.UI.Page
     //Display student report using studentID
     private void gdvCoopReportsUsingStudentID()
     {
-        ObjCoopReportBO.StudentID = Convert.ToInt64(txtStudentID.Text);
+        ObjCoopReportBO.StudentID = int.Parse(txtStudentID.Text);
         DataSet ds = new DataSet();
         ds = ObjCoopReportBO.ReportByStudentID();
         if (ds.Tables[0].Rows.Count > 0)

@@ -20,75 +20,6 @@ public class EmployerEvalFromDAL
     //Eslablishing a connections to connect database to perform different queries
     static SqlConnection SqlCon = BaseDAL.Connection_through_Config();
 
-    //Method for Inserting EmployerForm Form data in DB
-    public int SubmitEmployerForm(EmployerEvaFormBO objBEL)
-    {
-        int Save;
-        try
-        {
-            SqlCommand cmd = new SqlCommand("Sp_StudentEvalForm", SqlCon);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@StudentName", objBEL.StudentName);
-            cmd.Parameters.AddWithValue("@StudentId", objBEL.StudentId);
-            cmd.Parameters.AddWithValue("@Organization", objBEL.Organization);
-            cmd.Parameters.AddWithValue("@year", objBEL.year);
-            cmd.Parameters.AddWithValue("@Term", objBEL.Term);
-            cmd.Parameters.AddWithValue("@JobTitle", objBEL.JobTitle);
-            cmd.Parameters.AddWithValue("@InterestInWork", objBEL.InterestInWork);
-            cmd.Parameters.AddWithValue("@AbilityToLearn", objBEL.AbilityToLearn);
-            cmd.Parameters.AddWithValue("@QualityofWork", objBEL.QualityofWork);
-            cmd.Parameters.AddWithValue("@ProblemSolving", objBEL.ProblemSolving);
-            cmd.Parameters.AddWithValue("@TeamWork", objBEL.TeamWork);
-            cmd.Parameters.AddWithValue("@Dependability", objBEL.Dependability);
-            cmd.Parameters.AddWithValue("@ResponseToSupervision", objBEL.ResponseToSupervision);
-            cmd.Parameters.AddWithValue("@Reflection", objBEL.Reflection);
-            cmd.Parameters.AddWithValue("@Resoursefulness", objBEL.Resoursefulness);
-            cmd.Parameters.AddWithValue("@EthicalBehaviour", objBEL.EthicalBehaviour);
-            cmd.Parameters.AddWithValue("@AppreciationofDiversity", objBEL.AppreciationofDiversity);
-            cmd.Parameters.AddWithValue("@EnterpreneurialOrientation", objBEL.EnterpreneurialOrientation);
-            cmd.Parameters.AddWithValue("@WrittenCommunication", objBEL.WrittenCommunication);
-            cmd.Parameters.AddWithValue("@OralCommuniation", objBEL.OralCommuniation);
-            cmd.Parameters.AddWithValue("@InterpersonalCommunication", objBEL.InterpersonalCommunication);
-            cmd.Parameters.AddWithValue("@OverallPerformanceRating", objBEL.OverallPerformanceRating);
-            cmd.Parameters.AddWithValue("@SupervisorsComments", objBEL.SupervisorsComments);
-            cmd.Parameters.AddWithValue("@SupervisorsRecommendations", objBEL.SupervisorsRecommendations);
-            cmd.Parameters.AddWithValue("@NextWorkTerm", objBEL.NextWorkTerm);
-            cmd.Parameters.AddWithValue("@OfferNextWorkTerm", objBEL.OfferNextWorkTerm);
-            cmd.Parameters.AddWithValue("@OfferStatus", objBEL.OfferStatus);
-            cmd.Parameters.AddWithValue("@NextWorkTermFrom", objBEL.NextWorkTermFrom);
-            cmd.Parameters.AddWithValue("@NextWorkTermTo", objBEL.NextWorkTermTo);
-            cmd.Parameters.AddWithValue("@SupervisorsName", objBEL.SupervisorsName);
-            cmd.Parameters.AddWithValue("@SupervisorsTitle", objBEL.SupervisorsTitle);
-            cmd.Parameters.AddWithValue("@Currentdate", objBEL.Currentdate);
-            cmd.Parameters.AddWithValue("@ManagerName", objBEL.ManagerName);
-            cmd.Parameters.AddWithValue("@Type", "I");
-            if (SqlCon.State == ConnectionState.Closed)
-            {
-                SqlCon.Open();
-            }
-            Save = cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            if (Save > 0)
-            {
-                return Save;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        catch (Exception ex)
-        {
-            throw ex;
-        }
-        finally
-        {
-            if (SqlCon.State != ConnectionState.Closed)
-            {
-                SqlCon.Close();
-            }
-        }
-    }
     internal static DataSet EmpEvalutionForm(int StudentId)
     {
         SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
@@ -123,5 +54,60 @@ public class EmployerEvalFromDAL
         {
             throw;
         }
+<<<<<<< HEAD
+    }
+
+
+
+    internal static DataSet InsertEmpEvalForm(EmployerEvaFormBO ObjEmployerBO)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@StudentId", ObjEmployerBO.StudentId);
+        da.SelectCommand.Parameters.AddWithValue("@StudentName", ObjEmployerBO.StudentName);
+        da.SelectCommand.Parameters.AddWithValue("@Organization", ObjEmployerBO.Organization);
+        da.SelectCommand.Parameters.AddWithValue("@JobTitle", ObjEmployerBO.JobTitle);
+        da.SelectCommand.Parameters.AddWithValue("@Term", ObjEmployerBO.Term);
+        da.SelectCommand.Parameters.AddWithValue("@year", ObjEmployerBO.year);
+        da.SelectCommand.Parameters.AddWithValue("@InterestInWork", ObjEmployerBO.InterestInWork);
+        da.SelectCommand.Parameters.AddWithValue("@AbilityToLearn", ObjEmployerBO.AbilityToLearn);
+        da.SelectCommand.Parameters.AddWithValue("@QualityofWork", ObjEmployerBO.QualityofWork);
+        da.SelectCommand.Parameters.AddWithValue("@ProblemSolving", ObjEmployerBO.ProblemSolving);
+        da.SelectCommand.Parameters.AddWithValue("@TeamWork", ObjEmployerBO.TeamWork);
+        da.SelectCommand.Parameters.AddWithValue("@Dependability", ObjEmployerBO.Dependability);
+        da.SelectCommand.Parameters.AddWithValue("@ResponseToSupervision", ObjEmployerBO.ResponseToSupervision);
+        da.SelectCommand.Parameters.AddWithValue("@Reflection", ObjEmployerBO.Reflection);
+        da.SelectCommand.Parameters.AddWithValue("@Resoursefulness", ObjEmployerBO.Resoursefulness);
+        da.SelectCommand.Parameters.AddWithValue("@EthicalBehaviour", ObjEmployerBO.EthicalBehaviour);
+        da.SelectCommand.Parameters.AddWithValue("@AppreciationofDiversity", ObjEmployerBO.AppreciationofDiversity);
+        da.SelectCommand.Parameters.AddWithValue("@EnterpreneurialOrientation", ObjEmployerBO.EnterpreneurialOrientation);
+        da.SelectCommand.Parameters.AddWithValue("@WrittenCommunication", ObjEmployerBO.WrittenCommunication);
+        da.SelectCommand.Parameters.AddWithValue("@OralCommuniation", ObjEmployerBO.OralCommuniation);
+        da.SelectCommand.Parameters.AddWithValue("@InterpersonalCommunication", ObjEmployerBO.InterpersonalCommunication);
+        da.SelectCommand.Parameters.AddWithValue("@OverallPerformanceRating", ObjEmployerBO.OverallPerformanceRating);
+        da.SelectCommand.Parameters.AddWithValue("@SupervisorsComments", ObjEmployerBO.SupervisorsComments);
+        da.SelectCommand.Parameters.AddWithValue("@SupervisorsRecommendations", ObjEmployerBO.SupervisorsRecommendations);
+        da.SelectCommand.Parameters.AddWithValue("@NextWorkTerm", ObjEmployerBO.NextWorkTerm);
+        da.SelectCommand.Parameters.AddWithValue("@OfferNextWorkTerm", ObjEmployerBO.OfferNextWorkTerm);
+        da.SelectCommand.Parameters.AddWithValue("@OfferStatus", ObjEmployerBO.OfferStatus);
+        da.SelectCommand.Parameters.AddWithValue("@NextWorkTermFrom", ObjEmployerBO.NextWorkTermFrom);
+        da.SelectCommand.Parameters.AddWithValue("@NextWorkTermTo", ObjEmployerBO.NextWorkTermTo);
+        da.SelectCommand.Parameters.AddWithValue("@SupervisorsName", ObjEmployerBO.SupervisorsName);
+        da.SelectCommand.Parameters.AddWithValue("@SupervisorsTitle", ObjEmployerBO.SupervisorsTitle);
+        da.SelectCommand.Parameters.AddWithValue("@Currentdate", ObjEmployerBO.Currentdate);
+        da.SelectCommand.Parameters.AddWithValue("@ManagerName", ObjEmployerBO.ManagerName);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "I");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch {
+            throw;
+        }
+    }
+=======
     }     
+>>>>>>> 93514cdf4a943575cc9260ea354d062c43711391
 }
