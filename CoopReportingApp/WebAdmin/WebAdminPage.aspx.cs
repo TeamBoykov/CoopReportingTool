@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CoopReportingApp
 {
-    public partial class index1 : System.Web.UI.Page
+    public partial class testing1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

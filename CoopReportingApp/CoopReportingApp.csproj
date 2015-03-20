@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoopAdvisor\coopadvisor.aspx" />
+    <Content Include="CoopAdvisor\GradePage.aspx" />
     <Content Include="Images\college.png" />
     <Content Include="Images\college1.jpg" />
     <Content Include="Images\college2.jpeg" />
@@ -70,8 +71,12 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\script.js" />
+<<<<<<< HEAD
+    <Content Include="Student\StudentHome.aspx" />
+=======
     <Content Include="StudentSubmissionForm.aspx" />
     <Content Include="Student\student.aspx" />
+>>>>>>> a3e4b003ba499b0beff62d968c48b1101b92770c
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\full-slider.css" />
@@ -93,6 +98,20 @@
     <Compile Include="CoopAdvisor\coopadvisor.Master.designer.cs">
       <DependentUpon>coopadvisor.Master</DependentUpon>
     </Compile>
+    <Compile Include="CoopAdvisor\GradePage.aspx.cs">
+      <DependentUpon>GradePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.aspx.designer.cs">
+      <DependentUpon>GradePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.Master.cs">
+      <DependentUpon>GradePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoopAdvisor\GradePage.Master.designer.cs">
+      <DependentUpon>GradePage.Master</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,6 +127,10 @@
       <DependentUpon>index.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <Compile Include="Student\NewStudent.Master.cs">
+      <DependentUpon>NewStudent.Master</DependentUpon>
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     <Compile Include="StudentSubmissionForm.aspx.cs">
@@ -129,17 +152,18 @@
 >>>>>>> 26fde4d88b2d4b7467e64c19e2354d004273c028
     <Compile Include="Student\student.aspx.cs">
       <DependentUpon>student.aspx</DependentUpon>
+>>>>>>> a3e4b003ba499b0beff62d968c48b1101b92770c
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\student.aspx.designer.cs">
-      <DependentUpon>student.aspx</DependentUpon>
+    <Compile Include="Student\NewStudent.Master.designer.cs">
+      <DependentUpon>NewStudent.Master</DependentUpon>
     </Compile>
-    <Compile Include="Student\student.Master.cs">
-      <DependentUpon>student.Master</DependentUpon>
+    <Compile Include="Student\StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Student\student.Master.designer.cs">
-      <DependentUpon>student.Master</DependentUpon>
+    <Compile Include="Student\StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebAdmin\WebAdminPage.aspx.cs">
       <DependentUpon>WebAdminPage.aspx</DependentUpon>
@@ -159,7 +183,8 @@
   <ItemGroup>
     <Content Include="index.Master" />
     <Content Include="CoopAdvisor\coopadvisor.Master" />
-    <Content Include="Student\student.Master" />
+    <Content Include="Student\NewStudent.Master" />
+    <Content Include="CoopAdvisor\GradePage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
