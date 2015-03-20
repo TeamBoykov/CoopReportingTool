@@ -337,7 +337,7 @@ solutions and display flexibility in unique or demanding circumstances.
     </div>
     <hr />
     <p>
-        If the student, has accepted please confirm:
+        If the student has accepted, please confirm:
     </p>
     <p>
        Next Work term Dates: 
