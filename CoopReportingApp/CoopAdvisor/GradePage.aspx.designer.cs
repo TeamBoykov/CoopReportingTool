@@ -7,64 +7,64 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CoopReportingApp {
+namespace CoopReportingApp.CoopAdvisor {
     
     
-    public partial class testing1 {
+    public partial class GradePage1 {
         
         /// <summary>
-        /// AdvFNameTbx control.
+        /// DevAlertMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvFNameTbx;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DevAlertMessage;
         
         /// <summary>
-        /// FirstNameRequired control.
+        /// BunAlertMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameRequired;
+        protected global::System.Web.UI.WebControls.Button BunAlertMessage;
         
         /// <summary>
-        /// AdvLNameTbx control.
+        /// lbl_msg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvLNameTbx;
+        protected global::System.Web.UI.WebControls.Label lbl_msg;
         
         /// <summary>
-        /// LstNameRequired control.
+        /// LabelStudentID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator LstNameRequired;
+        protected global::System.Web.UI.WebControls.Label LabelStudentID;
         
         /// <summary>
-        /// AdvIDTbx control.
+        /// TextStudentID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvIDTbx;
+        protected global::System.Web.UI.WebControls.TextBox TextStudentID;
         
         /// <summary>
-        /// AdvIdRequired control.
+        /// StdIDRequired control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator AdvIdRequired;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator StdIDRequired;
         
         /// <summary>
         /// IDNumberonly control.
@@ -85,58 +85,31 @@ namespace CoopReportingApp {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegeExp_9Digitonly;
         
         /// <summary>
-        /// Advcell control.
+        /// LabelStudentGrade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Advcell;
+        protected global::System.Web.UI.WebControls.Label LabelStudentGrade;
         
         /// <summary>
-        /// AdvCellvalidation control.
+        /// TextStudentGrade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator AdvCellvalidation;
+        protected global::System.Web.UI.WebControls.TextBox TextStudentGrade;
         
         /// <summary>
-        /// AdvPhone control.
+        /// RequiredFieldValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvPhone;
-        
-        /// <summary>
-        /// AdvCellvalidation0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator AdvCellvalidation0;
-        
-        /// <summary>
-        /// AdvEmailTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvEmailTextBox;
-        
-        /// <summary>
-        /// EmailRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailRequired;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// regexEmailValid control.
@@ -148,93 +121,75 @@ namespace CoopReportingApp {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regexEmailValid;
         
         /// <summary>
-        /// AdvAreaTextBox control.
+        /// LabelWorkTerm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvAreaTextBox;
+        protected global::System.Web.UI.WebControls.Label LabelWorkTerm;
         
         /// <summary>
-        /// AdvPW0 control.
+        /// dropWorkTerm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvPW0;
+        protected global::System.Web.UI.WebControls.DropDownList dropWorkTerm;
         
         /// <summary>
-        /// PWRequired control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PWRequired;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// RegExPasword control.
+        /// LabelAdvName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExPasword;
+        protected global::System.Web.UI.WebControls.Label LabelAdvName;
         
         /// <summary>
-        /// AdvPW1 control.
+        /// TextAdvisorName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AdvPW1;
+        protected global::System.Web.UI.WebControls.TextBox TextAdvisorName;
         
         /// <summary>
-        /// PWCompare control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator PWCompare;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// btnManageAdvisor0 control.
+        /// BtniInsert control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnManageAdvisor0;
+        protected global::System.Web.UI.WebControls.Button BtniInsert;
         
         /// <summary>
-        /// btnCancel control.
+        /// BtnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
-        
-        /// <summary>
-        /// btnManageStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnManageStudent;
-        
-        /// <summary>
-        /// btnManageAdvisor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnManageAdvisor;
+        protected global::System.Web.UI.WebControls.Button BtnCancel;
     }
 }
