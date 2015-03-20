@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-      <script src="../Scripts/jquery.js"></script>
+    <script src="../Scripts/jquery.js"></script>
     <script src="../Scripts/script.js"></script>
     <link href="../Styles/bootstrap.css" rel="stylesheet" />
     <link href="../Styles/styles.css" rel="stylesheet" />
@@ -18,11 +18,18 @@
             <header>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="../Images/header1.png" alt="header" /></div>
+                        <img src="../Images/header1.png" alt="header" />
+                    </div>
                 </div>
-                <nav>   
+                <nav>
                     <ul class="nav nav-pills">
-                        <li role="presentation"><a href="StudentCoopForm">MOnthly Co-op Report</a></li>
+                        <li role="presentation"><a href="StudentHome.aspx">Student Home</a></li>
+                       <%-- <li role="presentation"><a href="#">Profile</a></li>
+                        <li role="presentation"><a href="#">Work History</a></li><a href="student.Master">student.Master</a>
+                        <li role="presentation"><a href="#">Company</a></li>--%>
+                        <li role="presentation"><a href="StudentCoopReport.aspx">Student Coop Report</a></li>
+                        <li role="presentation"><a href="../EmployerForm.aspx">Employer Evalution Form</a></li>
+                        <li role="presentation"><a href="../CoopAdvisor/StudentReport.aspx">View Student Reports</a></li>
                     </ul>
                 </nav>
             </header>
@@ -31,7 +38,7 @@
                 </asp:ContentPlaceHolder>
             </div>
             <footer class="footer">
-                    <p>Copyright © 2014-15 <a href="http://www.centennialcollege.ca" target="_blank">Centennialcollge.ca</a>. All rights reserved.</p>
+                <p>Copyright © 2014-15 <a href="http://www.centennialcollege.ca" target="_blank">Centennialcollge.ca</a>. All rights reserved.</p>
             </footer>
         </form>
     </div>
