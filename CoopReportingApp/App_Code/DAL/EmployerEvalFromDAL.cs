@@ -54,7 +54,6 @@ public class EmployerEvalFromDAL
         {
             throw;
         }
-<<<<<<< HEAD
     }
 
 
@@ -107,7 +106,4 @@ public class EmployerEvalFromDAL
             throw;
         }
     }
-=======
-    }     
->>>>>>> 93514cdf4a943575cc9260ea354d062c43711391
 }
