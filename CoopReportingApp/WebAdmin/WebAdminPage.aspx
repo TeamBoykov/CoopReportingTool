@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdmin/webadmin.Master" AutoEventWireup="true" CodeBehind="WebAdminPage.aspx.cs" Inherits="CoopReportingApp.testing1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebAdmin/webadmin.Master" AutoEventWireup="true" CodeBehind="WebAdminPage.aspx.cs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 </asp:Content>

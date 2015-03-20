@@ -432,7 +432,7 @@ professional development (optional):
     <div align="center">
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click" />
         <asp:Button ID="btnClear" runat="server" CausesValidation="False"
-            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" OnClick="btnClear_Click" />
+            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" />
     </div>
     <br />
 
