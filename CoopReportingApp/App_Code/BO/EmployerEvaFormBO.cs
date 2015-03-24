@@ -53,6 +53,8 @@ public class EmployerEvaFormBO
     public DateTime Currentdate { get; set; }
     public string ManagerName { get; set; }
 
+    public string Questionnaires { get; set; }
+
     public System.Data.DataSet EmpEvalutionForm()
     {
         return EmployerEvalFromDAL.EmpEvalutionForm(StudentId);
@@ -67,5 +69,15 @@ public class EmployerEvaFormBO
     public System.Data.DataSet InsertEmpEvalForm(EmployerEvaFormBO ObjEmployerBO)
     {
         return EmployerEvalFromDAL.InsertEmpEvalForm(ObjEmployerBO);
+    }
+
+    public System.Data.DataSet GetQuestionnairesInfo()
+    {
+        return EmployerEvalFromDAL.GetQuestionnairesInfo(Organization, Questionnaires);
+    }
+
+    public System.Data.DataSet GetCompanies()
+    {
+        return EmployerEvalFromDAL.GetCompanies();
     }
 }

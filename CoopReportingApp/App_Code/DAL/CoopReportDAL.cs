@@ -157,4 +157,39 @@ public class CoopReportDAL
             throw;
         }
     }
+    internal static DataSet GetQuestionnaresInfo(string Oraganization, string Questionnaires)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_CoopForm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@Oraganization", Oraganization);
+        da.SelectCommand.Parameters.AddWithValue("@Questionnaires", Questionnaires);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "GR");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
+
+    internal static DataSet GetCompanies()
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_CoopForm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@Type", "C");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }
