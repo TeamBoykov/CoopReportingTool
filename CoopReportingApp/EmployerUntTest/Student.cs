@@ -40,9 +40,9 @@ namespace EmployerUntTest
             objBEL.StudentID = int.Parse("300262626");
             objBEL.StudentName = "Raj";
             objBEL.SupervisorActive = "Yes";
-            objBEL.Year = "2015";
+            objBEL.Year = int.Parse("2015");
 
-            objBEL.SubmitForm(objBEL);
+            objBEL.InsertCoopReport(objBEL);
 
         }
         public void AllStudentCoopReports()
