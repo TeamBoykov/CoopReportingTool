@@ -25,8 +25,8 @@ namespace EmployerUntTest
             objBEL.JobTitle = "Devloper";
             objBEL.ManagerName = "Jon";
             objBEL.NextWorkTerm = "Yes";
-            objBEL.NextWorkTermFrom = DateTime.Parse("2015-03-16");
-            objBEL.NextWorkTermTo = DateTime.Parse("2015-03-16");
+            objBEL.NextWorkTermFrom = "2015-03-16";
+            objBEL.NextWorkTermTo = "2015-03-16";
             objBEL.OfferNextWorkTerm = "Yes";
             objBEL.OfferStatus = "Yes";
             objBEL.OralCommuniation = "Good";
@@ -47,7 +47,7 @@ namespace EmployerUntTest
             objBEL.Term = "Spring";
             objBEL.WrittenCommunication = "Good";
             objBEL.year = int.Parse("1997");
-            objBEL.SubmitEmployerForm(objBEL);
+            objBEL.InsertEmpEvalForm(objBEL);
 
 
           

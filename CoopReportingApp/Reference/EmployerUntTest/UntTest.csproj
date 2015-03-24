@@ -35,9 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="App_Code, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Reference\bin\App_Code.dll</HintPath>
+    <Reference Include="App_Code">
+      <HintPath>..\..\..\..\..\..\..\CoopPublish\bin\App_Code.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
