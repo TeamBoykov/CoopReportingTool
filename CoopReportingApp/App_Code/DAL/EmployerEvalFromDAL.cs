@@ -106,4 +106,39 @@ public class EmployerEvalFromDAL
             throw;
         }
     }
+    internal static DataSet GetQuestionnairesInfo(string Organization, string Questionnaires)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@Organization", Organization);
+        da.SelectCommand.Parameters.AddWithValue("@Questionnaires", Questionnaires);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "GR");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
+
+    internal static DataSet GetCompanies()
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@Type", "C");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }

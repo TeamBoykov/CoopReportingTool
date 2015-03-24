@@ -42,6 +42,7 @@ public class CoopReportBO
     public string SelfEvaluation { get; set; }
     public string DutiesPerformed { get; set; }
     public string Comments { get; set; }
+    public string Questionnaires { get; set; }
 
     public System.Data.DataSet AllStudentCoopReports()
     {
@@ -71,5 +72,15 @@ public class CoopReportBO
     public System.Data.DataSet InsertCoopReport(CoopReportBO objCoopReportBO)
     {
         return CoopReportDAL.InsertCoopReport(objCoopReportBO);
+    }
+
+    public System.Data.DataSet GetQuestionnairesInfo()
+    {
+        return CoopReportDAL.GetQuestionnaresInfo(Oraganization, Questionnaires);
+    }
+
+    public System.Data.DataSet GetCompanies()
+    {
+        return CoopReportDAL.GetCompanies();
     }
 }
