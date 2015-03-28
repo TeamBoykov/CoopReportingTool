@@ -16,6 +16,7 @@ public partial class CoopAdvisor_SelectedStudent : System.Web.UI.Page
         }
     }
     EmployerEvaFormBO objEmployerEvaFormBO = new EmployerEvaFormBO();
+    GradepageBO objGradepageBo = new GradepageBO(); 
     CoopReportBO ObjCoopReportBO = new CoopReportBO();
     DataSet ds = new DataSet();
     private void EmployeeEvaForm()
@@ -56,5 +57,11 @@ public partial class CoopAdvisor_SelectedStudent : System.Web.UI.Page
         {
             Response.Redirect("IndividualEvalutionForm.aspx?ID=" + e.CommandArgument.ToString());
         }
+    }
+
+    protected void btnGrade_Click(object sender, EventArgs e)
+    {
+        int StudentID = int.Parse(Request.QueryString["StudentID"].ToString());
+        Response.Redirect("Gradepage.aspx?StudentID=" + StudentID);
     }
 }
