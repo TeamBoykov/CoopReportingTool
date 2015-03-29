@@ -58,5 +58,5 @@
     </asp:GridView>
     <hr />
     <h4><asp:Label ID="lblmessage" runat="server" Text=""></asp:Label></h4>
-    <asp:Button ID="btnGrade" runat="server" CssClass="btn btn-success" Text="Grade" />
+    <asp:Button ID="btnGrade" runat="server" CssClass="btn btn-success" Text="Grade" OnClick="btnGrade_Click" />
     <hr /></asp:Content>
