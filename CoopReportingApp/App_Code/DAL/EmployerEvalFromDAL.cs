@@ -53,8 +53,8 @@ public class EmployerEvalFromDAL
         catch
         {
             throw;
-        }
-    }
+       }
+      }   }
 
 
 
@@ -105,7 +105,7 @@ public class EmployerEvalFromDAL
         catch {
             throw;
         }
-    }
+}
     internal static DataSet GetQuestionnairesInfo(string Organization, string Questionnaires)
     {
         SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
@@ -140,5 +140,4 @@ public class EmployerEvalFromDAL
         {
             throw;
         }
-    }
-}
+    } }}

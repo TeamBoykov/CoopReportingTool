@@ -1,3 +1,4 @@
+﻿
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CoopAdvisor/coopadvisor.Master" AutoEventWireup="true" CodeFile="GenerateReport.aspx.cs" Inherits="CoopAdvisor_GenerateReport" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
@@ -29,3 +30,4 @@
     </asp:GridView>
 </asp:Content>
 
+﻿
