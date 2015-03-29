@@ -11,11 +11,11 @@
     </asp:DropDownList>
     <hr />
     <asp:DropDownList ID="ddlReportOptions" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlReportOptions_SelectedIndexChanged">
-        <asp:ListItem><--Select One Option--></asp:ListItem>
+        <asp:ListItem><--Select one Option--></asp:ListItem>
     </asp:DropDownList>
     <hr />
     <asp:DropDownList ID="ddlQuestions" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlQuestions_SelectedIndexChanged">
-        <asp:ListItem><--Select One Option--></asp:ListItem>
+        <asp:ListItem><--Select one Option--></asp:ListItem>
     </asp:DropDownList>
     <hr />
      <asp:GridView ID="gdvGenerateReport" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None"
