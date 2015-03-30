@@ -5,17 +5,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h3>Generate Reports</h3>
     <asp:DropDownList ID="ddlGenerateReport" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlGenerateReport_SelectedIndexChanged">
-        <asp:ListItem>Select One Option to Generate Report</asp:ListItem>
+        <asp:ListItem><--Select One Option to Generate Report--></asp:ListItem>
         <asp:ListItem>Student</asp:ListItem>
         <asp:ListItem>Employer</asp:ListItem>
     </asp:DropDownList>
     <hr />
     <asp:DropDownList ID="ddlReportOptions" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlReportOptions_SelectedIndexChanged">
-        <asp:ListItem>Select One Option</asp:ListItem>
+        <asp:ListItem><--Select one Option--></asp:ListItem>
     </asp:DropDownList>
     <hr />
     <asp:DropDownList ID="ddlQuestions" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlQuestions_SelectedIndexChanged">
-        <asp:ListItem>Select One Option</asp:ListItem>
+        <asp:ListItem><--Select one Option--></asp:ListItem>
     </asp:DropDownList>
     <hr />
      <asp:GridView ID="gdvGenerateReport" CssClass="table table-striped" runat="server" CellPadding="3" GridLines="None"
@@ -28,4 +28,3 @@
         <RowStyle />
     </asp:GridView>
 </asp:Content>
-

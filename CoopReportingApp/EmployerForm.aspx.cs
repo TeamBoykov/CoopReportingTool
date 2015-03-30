@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-
 public partial class EmployerForm : System.Web.UI.Page
 {
     //Establishing conection to BOlayer
@@ -14,19 +13,18 @@ public partial class EmployerForm : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         txtSubmittedDate.Text = DateTime.Now.ToString();
-        if (!IsPostBack) {
+        if (!IsPostBack)
+        {
             txtSId.Focus();
         }
     }
-
     //OnSubmitclick Action
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        SubmitEmployerForm();   
+        SubmitEmployerForm();
     }
-
     //Insert Method
-    protected void SubmitEmployerForm() 
+    protected void SubmitEmployerForm()
     {
         ObjEmployerBO.AbilityToLearn = rblAbilityToLearn.SelectedItem.Value;
         ObjEmployerBO.AppreciationofDiversity = rblAppreciationofDiversity.SelectedItem.Value;
@@ -48,7 +46,7 @@ public partial class EmployerForm : System.Web.UI.Page
         ObjEmployerBO.Reflection = rblReflection.SelectedItem.Value;
         ObjEmployerBO.Resoursefulness = rblResoursefulness.SelectedItem.Value;
         ObjEmployerBO.ResponseToSupervision = rblResponseToSupervision.SelectedItem.Value;
-        ObjEmployerBO.StudentId = int.Parse(txtSId.Text); 
+        ObjEmployerBO.StudentId = int.Parse(txtSId.Text);
         ObjEmployerBO.StudentName = txtSName.Text;
         ObjEmployerBO.SupervisorsComments = txtSupervisorsComments.Text;
         ObjEmployerBO.SupervisorsName = txtSupervisorsName.Text;
@@ -61,19 +59,16 @@ public partial class EmployerForm : System.Web.UI.Page
         ObjEmployerBO.NextWorkTermFrom = txtFromDate.Text;
         ObjEmployerBO.NextWorkTermTo = txtToDate.Text;
         ObjEmployerBO.Currentdate = Convert.ToDateTime(txtSubmittedDate.Text);
-
         ds = ObjEmployerBO.InsertEmpEvalForm(ObjEmployerBO);
         if (ds.Tables.Count > 0)
         {
             lblMessage.ForeColor = System.Drawing.Color.Green;
-            lblMessage.Text = txtSName.Text + "'s "+ ddlWorkTerm.SelectedItem.ToString() +" term evaluation form submited";
-
+            lblMessage.Text = txtSName.Text + "'s " + ddlWorkTerm.SelectedItem.ToString() + " term evaluation form submited";
         }
         else
         {
             lblMessage.ForeColor = System.Drawing.Color.Red;
             lblMessage.Text = txtSName.Text + "'s Evaluation form is already submitted for " + ddlWorkTerm.SelectedItem.ToString() + " Term";
         }
-
     }
 }

@@ -39,27 +39,28 @@ public class EmployerEvalFromDAL
     }
 
     internal static DataSet IndividualEvalutionForm(int Id)
-    {
-        SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
-        da.SelectCommand.CommandType = CommandType.StoredProcedure;
-        da.SelectCommand.Parameters.AddWithValue("@Id", Id);
-        da.SelectCommand.Parameters.AddWithValue("@Type", "SR");
-        DataSet ds = new DataSet();
-        da.Fill(ds);
-        try
-        {
-            return ds;
-        }
-        catch
-        {
-            throw;
-        }
-    }
+{
+SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
+da.SelectCommand.CommandType = CommandType.StoredProcedure;
+da.SelectCommand.Parameters.AddWithValue("@Id", Id);
+da.SelectCommand.Parameters.AddWithValue("@Type", "SR");
+DataSet ds = new DataSet();
+da.Fill(ds);
+try
+{
+return ds;
+}
+catch
+{
+throw;
+}
+
+}
 
 
 
-    internal static DataSet InsertEmpEvalForm(EmployerEvaFormBO ObjEmployerBO)
-    {
+ internal static DataSet InsertEmpEvalForm(EmployerEvaFormBO ObjEmployerBO)
+{
         SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
         da.SelectCommand.CommandType = CommandType.StoredProcedure;
         da.SelectCommand.Parameters.AddWithValue("@StudentId", ObjEmployerBO.StudentId);
@@ -105,7 +106,7 @@ public class EmployerEvalFromDAL
         catch {
             throw;
         }
-    }
+}
     internal static DataSet GetQuestionnairesInfo(string Organization, string Questionnaires)
     {
         SqlDataAdapter da = new SqlDataAdapter("Sp_StudentEvalForm", SqlCon);
@@ -140,5 +141,4 @@ public class EmployerEvalFromDAL
         {
             throw;
         }
-    }
-}
+    } }
