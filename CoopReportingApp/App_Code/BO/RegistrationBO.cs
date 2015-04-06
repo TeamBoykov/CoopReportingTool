@@ -18,7 +18,7 @@ public class RegistrationBO
 
     
     public int ID { get; set; }
-    public Int64 StudentId { get; set; }
+    public int StudentId { get; set; }
     public string SFname { get; set; }
     public string SLname { get; set; }
     public string SProgram { get; set; }
@@ -36,5 +36,22 @@ public class RegistrationBO
 
     public System.Data.DataSet StudentProfile() {
         return null;
+    }
+
+    public System.Data.DataSet SelectedStudentProfile()
+    {
+        return RegistrationDAL.SelectedStudentProfile(StudentId);
+    }
+
+    public System.Data.DataSet CurrentWorkTerm()
+    {
+
+        return RegistrationDAL.CurrentWorkTerm(StudentId);
+    }
+
+    public System.Data.DataSet StudentGrade()
+    {
+        return RegistrationDAL.Grade(StudentId);
+        
     }
 }
