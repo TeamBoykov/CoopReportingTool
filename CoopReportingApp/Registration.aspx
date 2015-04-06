@@ -228,9 +228,9 @@
             </tr>
         </table>
        <div align="center">
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" Height="41px" Width="138px" />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" Height="41px" Width="138px" OnClick="btnSubmit_Click" />
         <asp:Button ID="btnClear"  runat="server" CausesValidation="False"
-            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px"  />
+            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" OnClick="btnClear_Click1"  />
         </div>
         <tr>
             <td class="auto-style2" align="center"></td>
