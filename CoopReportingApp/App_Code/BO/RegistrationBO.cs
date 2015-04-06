@@ -37,4 +37,8 @@ public class RegistrationBO
     public System.Data.DataSet StudentProfile() {
         return null;
     }
+    public System.Data.DataSet UpdateProfile(RegistrationBO ObjRegistrationBO)
+    {
+        return RegistrationDAL.UpdateProfile(ObjRegistrationBO);
+    }
 }

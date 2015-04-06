@@ -34,5 +34,13 @@ namespace CoopReportingApp
             dropWorkTerm.SelectedIndex = 0;
             txtCoopAdvisor.Text = "";
         }
-    }
+        protected void btnClear_Click1(object sender, EventArgs e)
+        {
+
+        }
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+}
 }
