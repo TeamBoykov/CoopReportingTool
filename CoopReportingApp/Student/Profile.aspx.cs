@@ -53,7 +53,7 @@ public partial class Student_Profile : System.Web.UI.Page
             txtCity.Text = ds.Tables[0].Rows[0]["SCity"].ToString();
             if (ds.Tables[0].Rows[0]["SProvince"].ToString() != "")
             {
-                ddlProvince.Items.FindByText(ds.Tables[0].Rows[0]["SProvince"].ToString()).Selected = true;
+                ddlProvince.Items.FindByText(ds.Tables[0].Rows[0]["SProvince"].ToString()).Selected = true; 
             }
             txtPostalCode.Text = ds.Tables[0].Rows[0]["SPostalCode"].ToString();
             txtPhoneNo.Text = ds.Tables[0].Rows[0]["SPhone"].ToString();

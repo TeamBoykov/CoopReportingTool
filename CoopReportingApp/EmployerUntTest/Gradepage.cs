@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Data;
 
 namespace EmployerUntTest
 {
@@ -25,6 +26,22 @@ namespace EmployerUntTest
             else
             {
                 Console.Write("Grade already updated or Student does not exists");
+            }
+        }
+
+        //display grades
+        [TestMethod]
+        public void displaygrade() { 
+            objGradepage.StudentID = 300718283;
+            var ds = objGradepage.StudentGrade();
+            Console.WriteLine("Grades");
+            foreach (DataTable table in ds.Tables)
+            {
+                foreach (DataRow dr in table.Rows)
+                {
+                    Console.Write(dr["WorkTerm"].ToString());
+                    Console.Write(dr["Grade"].ToString());
+                }
             }
         }
 
