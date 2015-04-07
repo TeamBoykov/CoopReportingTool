@@ -40,4 +40,21 @@ public class GradepageDAL
             throw;
         }
     }
+    internal static DataSet StudentGrade(int StudentID)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_WorkTerm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@StudentId", StudentID);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "S");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }

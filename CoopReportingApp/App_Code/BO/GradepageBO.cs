@@ -26,27 +26,18 @@ public class GradepageBO
     public string Position { get; set; }
     public string Duties { get; set; }
     public string AUsername { get; set; }
-<<<<<<< HEAD
     public int Grade { get; set; }
-    public string WorkTerm { get; set; }
-
-    public System.Data.DataSet UpdateGrade(GradepageBO objGradeBO)
-    {
-        return GradepageDAL.UpdateGrade(objGradeBO);
-    }
-
-    //display student work term information
-    public System.Data.DataSet WorkTermInfo() {
-        return null;
-=======
-
-    public int Grade { get; set; }
+   
 
     //Refernce to insert a grade
     public System.Data.DataSet UpdateGrade(GradepageBO objGradeBO)
     {
         return GradepageDAL.UpdateGrade(objGradeBO);
->>>>>>> 33190cc269048807d541c0d6abf6fc4746432e7a
     }
-        
+
+    public System.Data.DataSet StudentGrade()
+    {
+        return GradepageDAL.StudentGrade(StudentID);
+    }
+
 }

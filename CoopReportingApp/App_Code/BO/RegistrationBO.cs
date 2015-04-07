@@ -34,8 +34,9 @@ public class RegistrationBO
 
     //display student profile information
 
-    public System.Data.DataSet StudentProfile() {
-        return null;
+    public System.Data.DataSet StudentProfile()
+    {
+        return RegistrationDAL.StudentProfile(StudentId);
     }
     public System.Data.DataSet UpdateProfile(RegistrationBO ObjRegistrationBO)
     {
