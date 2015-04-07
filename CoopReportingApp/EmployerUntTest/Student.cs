@@ -7,6 +7,7 @@ namespace EmployerUntTest
     public class Student
     {
         CoopReportBO objCoopReport = new CoopReportBO();
+        RegistrationBO ObjRegistrationBO = new RegistrationBO();
         [TestMethod]
 
         //student submit monthly coop report to coop advisor
@@ -296,6 +297,59 @@ namespace EmployerUntTest
             Console.WriteLine(ds.Tables[0].Rows[0]["No"].ToString());
             Console.WriteLine("Definitely Not");
             Console.WriteLine(ds.Tables[0].Rows[0]["Definitely_Not"].ToString());
+        }
+
+        //display student profile
+        [TestMethod]
+
+        public void GetStudentProfile() {
+            ObjRegistrationBO.StudentId = 300718283;
+            var ds = ObjRegistrationBO.StudentProfile();
+            Console.Write("StudentID:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["StudentID"].ToString());
+            Console.Write("Student First Name:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SFname"].ToString());
+            Console.Write("Student Last Name:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SLname"].ToString());
+            Console.Write("Student Program:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SProgram"].ToString());
+            Console.Write("Email:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SEmail"].ToString());
+            Console.Write("Address 1:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SAddress1"].ToString());
+            Console.Write("Address 2:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SAddress2"].ToString());
+            Console.Write("City:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SCity"].ToString());
+            Console.Write("Porvience:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SProvince"].ToString());
+            Console.Write("Postal Code:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SPostalCode"].ToString());
+            Console.Write("Phone Number:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SPhone"].ToString());
+            Console.Write("Mobile No:");
+            Console.WriteLine(ds.Tables[0].Rows[0]["SCell"].ToString());
+        }
+
+        //update student profile
+        public void updateStudentProfile() {
+            ObjRegistrationBO.StudentId = 300718283;
+            ObjRegistrationBO.SFname = "Srinivasarao";
+            ObjRegistrationBO.SLname = "Ch";
+            ObjRegistrationBO.SProgram = "Software Engineering";
+            ObjRegistrationBO.SEmail = "sri2vas@1.com";
+            ObjRegistrationBO.SAddress1 = "370";
+            ObjRegistrationBO.SAddress2 = "Schreyer Screscent";
+            ObjRegistrationBO.SCity = "Milton";
+            ObjRegistrationBO.SProvince = "Ontario";
+            ObjRegistrationBO.SPostalCode = "L9T7T2";
+            ObjRegistrationBO.SPhone = "6477866026";
+            ObjRegistrationBO.SCell = "6477866025";
+            var ds = ObjRegistrationBO.UpdateProfile(ObjRegistrationBO);
+            if (ds.Tables[0].Rows.Count > 0) {
+                Console.WriteLine("Student Profile Updated");
+            }
+
         }
     }
 }
