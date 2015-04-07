@@ -19,6 +19,23 @@ public class RegistrationDAL
 
     static SqlConnection SqlCon = BaseDAL.Connection_through_Config();
 
+    internal static System.Data.DataSet StudentProfile(long StudentId)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_StudentInfo", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@StudentID", StudentId);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "S");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 
     internal static DataSet UpdateProfile(RegistrationBO ObjRegistrationBO)
     {
