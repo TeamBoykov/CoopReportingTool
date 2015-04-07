@@ -22,33 +22,6 @@ public partial class CoopAdvisor_GenerateReport : System.Web.UI.Page
         gdvGenerateReport.DataBind();
         if (ddlGenerateReport.SelectedItem.ToString() == "Student")
         {
-            ds = objCoopReportBO.GetCompanies();
-            if (ds.Tables.Count > 0)
-            {
-                ddlReportOptions.DataSource = ds;
-                ddlReportOptions.DataTextField = "Oraganization";
-                ddlReportOptions.DataValueField = "Oraganization";
-                ddlReportOptions.DataBind();
-            }
-        }
-        else
-        {
-            ds = objEmployerEvalFromBO.GetCompanies();
-            if (ds.Tables.Count > 0)
-            {
-                ddlReportOptions.DataSource = ds;
-                ddlReportOptions.DataTextField = "Organization";
-                ddlReportOptions.DataValueField = "Organization";
-                ddlReportOptions.DataBind();
-            }
-        }
-    }
-    protected void ddlReportOptions_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        gdvGenerateReport.DataSource = "";
-        gdvGenerateReport.DataBind();
-        if (ddlGenerateReport.SelectedItem.ToString() == "Student")
-        {
             ddlQuestions.Items.Clear();
             ddlQuestions.Items.Add(new ListItem("Select One Option"));
             ddlQuestions.Items.Add(new ListItem("LikeIntership"));
@@ -69,6 +42,14 @@ public partial class CoopAdvisor_GenerateReport : System.Web.UI.Page
             ddlQuestions.Items.Add(new ListItem("Rewarding"));
             ddlQuestions.Items.Add(new ListItem("ObjectiveEstablished"));
             ddlQuestions.Items.Add(new ListItem("Recommend"));
+            ds = objCoopReportBO.GetCompanies();
+            if (ds.Tables.Count > 0)
+            {
+                ddlReportOptions.DataSource = ds;
+                ddlReportOptions.DataTextField = "Oraganization";
+                ddlReportOptions.DataValueField = "Oraganization";
+                ddlReportOptions.DataBind();
+            }
         }
         else
         {
@@ -90,6 +71,14 @@ public partial class CoopAdvisor_GenerateReport : System.Web.UI.Page
             ddlQuestions.Items.Add(new ListItem("OralCommuniation"));
             ddlQuestions.Items.Add(new ListItem("InterpersonalCommunication"));
             ddlQuestions.Items.Add(new ListItem("OverallPerformanceRating"));
+            ds = objEmployerEvalFromBO.GetCompanies();
+            if (ds.Tables.Count > 0)
+            {
+                ddlReportOptions.DataSource = ds;
+                ddlReportOptions.DataTextField = "Organization";
+                ddlReportOptions.DataValueField = "Organization";
+                ddlReportOptions.DataBind();
+            }
         }
     }
     protected void ddlQuestions_SelectedIndexChanged(object sender, EventArgs e)
