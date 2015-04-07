@@ -22,9 +22,11 @@ public class GradepageBO
     public string City { get; set; }
     public string Province { get; set; }
     public string PostalCode { get; set; }
+    public string WorkTerm { get; set; }
     public string Position { get; set; }
     public string Duties { get; set; }
     public string AUsername { get; set; }
+<<<<<<< HEAD
     public int Grade { get; set; }
     public string WorkTerm { get; set; }
 
@@ -36,6 +38,15 @@ public class GradepageBO
     //display student work term information
     public System.Data.DataSet WorkTermInfo() {
         return null;
+=======
+
+    public int Grade { get; set; }
+
+    //Refernce to insert a grade
+    public System.Data.DataSet UpdateGrade(GradepageBO objGradeBO)
+    {
+        return GradepageDAL.UpdateGrade(objGradeBO);
+>>>>>>> 33190cc269048807d541c0d6abf6fc4746432e7a
     }
         
 }
