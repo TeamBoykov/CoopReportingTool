@@ -14,33 +14,5 @@ namespace CoopReportingApp
 
         }
 
-        protected void btnClear_Click(object sender, EventArgs e)
-        {
-
-            txtFirstName.Text = "";
-            txtLastName.Text = "";
-            txtStudentNumber.Text = "";
-            txtStudentProgram.Text = "";
-            txtEmail.Text = "";
-            txtAddress.Text = "";
-            txtEmail.Text = "";
-            txtMob.Text = "";
-            txtPhoneNumber.Text = "";
-            txtPassword.Text = "";
-            txtConfirmPassword.Text = "";
-            txtCompany.Text = "";
-            txtCompanyAddress.Text = "";
-            txtPosition.Text = "";
-            dropWorkTerm.SelectedIndex = 0;
-            txtCoopAdvisor.Text = "";
-        }
-        protected void btnClear_Click1(object sender, EventArgs e)
-        {
-
-        }
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
-}
+    }
 }
