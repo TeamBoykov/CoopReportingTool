@@ -62,18 +62,14 @@ public partial class Student_Profile : System.Web.UI.Page
     }
     protected void btnEdit_Click(object sender, EventArgs e)
     {
-        txtSFName.Focus();
         btnEdit.Enabled = false;
         btnSave.Enabled = true;
         btnClear.Enabled = true;
-        txtSFName.ReadOnly = false;
-        txtSLName.ReadOnly = false;
         txtAddress1.ReadOnly = false;
         txtAddress2.ReadOnly = false;
         txtCity.ReadOnly = false;
         ddlProvince.Enabled = true;
         txtPostalCode.ReadOnly = false;
-        txtProgram.ReadOnly = false;
         txtEmail.ReadOnly = false;
         txtPhoneNo.ReadOnly = false;
         txtMobileNo.ReadOnly = false;

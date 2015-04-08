@@ -92,11 +92,21 @@
         </div>
         <div class="col-md-12">
             <asp:Label ID="Label18" runat="server" Text="Phone Number:"></asp:Label>
-            <asp:TextBox ID="txtPhoneNo" CssClass="form-control" placeholder="Phone Number" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="txtPhoneNo" CssClass="form-control" placeholder="XXX-XXX-XXXX" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                ControlToValidate="txtPhoneNo" ErrorMessage="Invalid Phone Number"
+                 ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"
+                 Font-Size="XX-Small" ForeColor="#CC0000"></asp:RegularExpressionValidator>
+
         </div>
         <div class="col-md-12">
             <asp:Label ID="Label19" runat="server" Text="Mobile Number:"></asp:Label>
-            <asp:TextBox ID="txtMobileNo" CssClass="form-control" placeholder="Mobile Number" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="txtMobileNo" CssClass="form-control" placeholder="XXX-XXX-XXXX"
+                 runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+                ControlToValidate="txtMobileNo" ErrorMessage="Invalid Phone Number"
+                 ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"
+                 Font-Size="XX-Small" ForeColor="#CC0000"></asp:RegularExpressionValidator>
         </div>
     </div>
     <hr />
