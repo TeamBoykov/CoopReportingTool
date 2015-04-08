@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     
-     <div class="row">
+        <div class="row">
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
@@ -318,11 +317,11 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-2">
-            <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-success"  />
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-success" OnClick="btnSubmit_Click" />
         </div>
         <div class="col-md-2">
             <asp:Button ID="btnClear" runat="server" CausesValidation="False"
-                Text="Clear" CssClass="btn btn-warning" />
+                Text="Clear" CssClass="btn btn-warning" OnClick="btnClear_Click1" />
         </div>
         <div class="col-md-4"></div>
     </div>
