@@ -22,4 +22,13 @@ public class AdvisorBO
     public string AArea { get; set; }
     public string AUsername { get; set; }
     public string APassword { get; set; }
+
+
+    //Refernce to insert advisor info
+    public System.Data.DataSet AdvisorInfo()
+    {
+        return AdvisorDAL.AdvisorInfo();
+    }
 }
+
+ 

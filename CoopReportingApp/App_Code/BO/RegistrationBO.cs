@@ -42,4 +42,10 @@ public class RegistrationBO
     {
         return RegistrationDAL.UpdateProfile(ObjRegistrationBO);
     }
+    //Refernce t insert Registration Info
+    public System.Data.DataSet Registration(RegistrationBO ObjRegistrationBO)
+    {
+        return RegistrationDAL.Registration(ObjRegistrationBO);
+    }
+
 }
