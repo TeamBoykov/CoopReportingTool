@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
 
 /// <summary>
 /// Summary description for AdvisorDAL
@@ -14,4 +18,23 @@ public class AdvisorDAL
 		// TODO: Add constructor logic here
 		//
 	}
+
+    static SqlConnection SqlCon = BaseDAL.Connection_through_Config();
+
+    internal static System.Data.DataSet AdvisorInfo()
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_Advisor", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@Type", "A");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }
