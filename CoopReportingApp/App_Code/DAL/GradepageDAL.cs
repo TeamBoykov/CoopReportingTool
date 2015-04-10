@@ -57,4 +57,31 @@ public class GradepageDAL
             throw;
         }
     }
+
+    internal static DataSet WorkTermInfo(GradepageBO ObjGradepageBO)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_WorkTerm", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@StudentId", ObjGradepageBO.StudentID);
+        da.SelectCommand.Parameters.AddWithValue("@CompanyName", ObjGradepageBO.CompanyName);
+        da.SelectCommand.Parameters.AddWithValue("@CompanyAddress1", ObjGradepageBO.CompanyAddress1);
+        da.SelectCommand.Parameters.AddWithValue("@CompanyAddress2", ObjGradepageBO.CompanyAddress2);
+        da.SelectCommand.Parameters.AddWithValue("@City", ObjGradepageBO.City);
+        da.SelectCommand.Parameters.AddWithValue("@Province", ObjGradepageBO.Province);
+        da.SelectCommand.Parameters.AddWithValue("@PostalCode", ObjGradepageBO.PostalCode);
+        da.SelectCommand.Parameters.AddWithValue("@WorkTerm", ObjGradepageBO.WorkTerm);
+        da.SelectCommand.Parameters.AddWithValue("@Position", ObjGradepageBO.Position);
+        da.SelectCommand.Parameters.AddWithValue("@AUsername", ObjGradepageBO.AUsername);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "I");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }
