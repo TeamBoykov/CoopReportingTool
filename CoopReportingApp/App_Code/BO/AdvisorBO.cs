@@ -29,6 +29,10 @@ public class AdvisorBO
     {
         return AdvisorDAL.AdvisorInfo();
     }
+    public System.Data.DataSet AdvisorLogin(AdvisorBO ObjAdvisorBO)
+    {
+        return AdvisorDAL.AdvisorLogin(ObjAdvisorBO);
+    }
 }
 
  
