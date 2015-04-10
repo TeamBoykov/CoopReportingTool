@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace CoopReportingApp
 {
@@ -11,7 +12,6 @@ namespace CoopReportingApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (!IsPostBack)
             {
                 txtusername.Focus();
@@ -55,10 +55,5 @@ namespace CoopReportingApp
                 }
             }
         }
-
-=======
-
-        }
->>>>>>> 2fdea90df104d33248d29dd5ec1ad7e81e06f2d7
     }
 }
