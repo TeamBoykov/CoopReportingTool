@@ -18,7 +18,11 @@ public class RegistrationBO
 
     
     public int ID { get; set; }
+<<<<<<< HEAD
     public int StudentId { get; set; }
+=======
+    public Int64 StudentId { get; set; }
+>>>>>>> a7211cb0ff4008030f8ff94ae6cb98561b05f5fa
     public string SFname { get; set; }
     public string SLname { get; set; }
     public string SProgram { get; set; }
@@ -34,6 +38,7 @@ public class RegistrationBO
 
     //display student profile information
 
+<<<<<<< HEAD
     public System.Data.DataSet StudentProfile() {
         return null;
     }
@@ -54,4 +59,20 @@ public class RegistrationBO
         return RegistrationDAL.Grade(StudentId);
         
     }
+=======
+    public System.Data.DataSet StudentProfile()
+    {
+        return RegistrationDAL.StudentProfile(StudentId);
+    }
+    public System.Data.DataSet UpdateProfile(RegistrationBO ObjRegistrationBO)
+    {
+        return RegistrationDAL.UpdateProfile(ObjRegistrationBO);
+    }
+    //Refernce t insert Registration Info
+    public System.Data.DataSet Registration(RegistrationBO ObjRegistrationBO)
+    {
+        return RegistrationDAL.Registration(ObjRegistrationBO);
+    }
+
+>>>>>>> a7211cb0ff4008030f8ff94ae6cb98561b05f5fa
 }
