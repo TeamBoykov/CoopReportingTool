@@ -4,94 +4,56 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 
-public partial class index : System.Web.UI.Page
+namespace CoopReportingApp
 {
-    CoopReportBO objCoopReportBO = new CoopReportBO();
-    DataSet ds = new DataSet();
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class index1 : System.Web.UI.Page
     {
-        if (!IsPostBack)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            txtSId.Focus();
+            if (!IsPostBack)
+            {
+                txtusername.Focus();
+            }
         }
-    }
-    CoopReportBO ObjCoopReportBO = new CoopReportBO();
-    protected void btnSubmit_Click(object sender, EventArgs e)
-    {
-        objCoopReportBO.StudentID = int.Parse(txtSId.Text);
-        objCoopReportBO.StudentName = txtSName.Text;
-        objCoopReportBO.AdvisorName = txtCoopAdvisorName.Text;
-        objCoopReportBO.Oraganization = txtOrg.Text;
-        objCoopReportBO.Year = int.Parse(ddlYear.SelectedItem.ToString());
-        objCoopReportBO.ReportMonth = ddlRmonth.SelectedItem.ToString();
-        objCoopReportBO.JobTitle = txtJTitle.Text;
-        objCoopReportBO.LikeIntership = rblIntership.SelectedItem.Value;
-        objCoopReportBO.AboutCoopAdvisor = rblCoopAdvisor.SelectedItem.Value;
-        objCoopReportBO.AdequatelyPrepared = rblAdequately.SelectedItem.Value;
-        objCoopReportBO.AgencySupervisor = rblAgencySupervisor.SelectedItem.Value;
-        objCoopReportBO.Attendance = rblAttendance.SelectedItem.Value;
-        objCoopReportBO.Curriculum = rblCurriculum.SelectedItem.Value;
-        objCoopReportBO.Expectation = rblExpectation.SelectedItem.Value;
-        objCoopReportBO.HelpProblems = rblHelpProblems.SelectedItem.Value;
-        objCoopReportBO.Learning = rblLearning.SelectedItem.Value;
-        objCoopReportBO.ObjectiveEstablished = rblObjectiveEstablished.SelectedItem.Value;
-        objCoopReportBO.OverStructured = rblOverStructured.SelectedItem.Value;
-        objCoopReportBO.Problems = rblProblems.SelectedItem.Value;
-        objCoopReportBO.Punctuality = rblPunctuality.SelectedItem.Value;
-        objCoopReportBO.Recommend = rblRecommend.SelectedItem.Value;
-        objCoopReportBO.Requirement = rblRequirements.SelectedItem.Value;
-        objCoopReportBO.Rewarding = rblRewarding.SelectedItem.Value;
-        objCoopReportBO.SelfEvaluation = rblSelfEvaluation.SelectedItem.Value;
-        objCoopReportBO.Structured = rblStructured.SelectedItem.Value;
-        objCoopReportBO.SupervisorActive = rblSupervisorActive.SelectedItem.Value;
-        ds = objCoopReportBO.InsertCoopReport(objCoopReportBO);
-        if (ds.Tables.Count > 0)
+        RegistrationBO ObjRegistrationBO = new RegistrationBO();
+        AdvisorBO ObjAdvisorBO = new AdvisorBO();
+        protected void btnlogin_Click(object sender, EventArgs e)
         {
-            lblMessage.ForeColor = System.Drawing.Color.Green;
-            lblMessage.Text = txtSName.Text + ":Report submitted successfully for" + ddlRmonth.SelectedItem.ToString() + " Month";
-
+            DataSet ds = new DataSet();
+            if (ddlloginas.SelectedItem.ToString() == "Student")
+            {
+                ObjRegistrationBO.StudentId = int.Parse(txtusername.Text);
+                ObjRegistrationBO.SPassword = txtpassword.Text;
+                ds = ObjRegistrationBO.StudentLogin(ObjRegistrationBO);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    Session["StudentID"] = int.Parse(txtusername.Text);
+                    Response.Redirect("~/Student/Profile.aspx");
+                }
+                else
+                {
+                    lblmessage.ForeColor = System.Drawing.Color.Red;
+                    lblmessage.Text = "Invalid login credentials";
+                }
+            }
+            else
+            {
+                ObjAdvisorBO.AUsername = txtusername.Text;
+                ObjAdvisorBO.APassword = txtpassword.Text;
+                ds = ObjAdvisorBO.AdvisorLogin(ObjAdvisorBO);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    Session["AdvisorName"] = txtusername.Text;
+                    Response.Redirect("~/CoopAdvisor/StudentReport.aspx");
+                }
+                else
+                {
+                    lblmessage.ForeColor = System.Drawing.Color.Red;
+                    lblmessage.Text = "Invalid login credentials";
+                }
+            }
         }
-        else
-        {
-            lblMessage.ForeColor = System.Drawing.Color.Red;
-            lblMessage.Text = "Report already submitted for" + ddlRmonth.SelectedItem.ToString() + " Month";
-        }
-    }
-
-    //Content Clear backend Code
-    protected void btnClear_Click(object sender, EventArgs e)
-    {
-        txtSId.Text = "";
-        txtSName.Text = "";
-        txtOrg.Text = "";
-        ddlYear.Text = "0";
-        ddlRmonth.Text = "0";
-        txtJTitle.Text = "";
-        txtDutiesPerformed.Text = "";
-        txtComments.Text = "";
-        txtCoopAdvisorName.Text = "";
-        rblAdequately.Text = "";
-        rblAgencySupervisor.Text = "";
-        rblAttendance.Text = "";
-        rblCoopAdvisor.Text = "";
-        rblCurriculum.Text = "";
-        rblExpectation.Text = "";
-        rblHelpProblems.Text = "";
-        rblIntership.Text = "";
-        rblLearning.Text = "";
-        rblObjectiveEstablished.Text = "";
-        rblOverStructured.Text = "";
-        rblProblems.Text = "";
-        rblPunctuality.Text = "";
-        rblRecommend.Text = "";
-        rblRequirements.Text = "";
-        rblRewarding.Text = "";
-        rblSelfEvaluation.Text = "";
-        rblStructured.Text = "";
-        rblSupervisorActive.Text = "";
-        lblMessage.Text = "";
 
     }
 }
