@@ -40,4 +40,9 @@ public class GradepageBO
         return GradepageDAL.StudentGrade(StudentID);
     }
 
+    //Refeerece to insert workterm info
+      public System.Data.DataSet WorkTermInfo(GradepageBO ObjGradepageBO)
+    {
+        return GradepageDAL.WorkTermInfo(ObjGradepageBO);
+    }
 }
