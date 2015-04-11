@@ -23,11 +23,11 @@
                 </div>
                 <nav>
                     <ul class="nav nav-pills">
-                        <!--<li role="presentation"><a href="index.aspx">Login</a></li>
-                        <li role="presentation"><a href="Registration.aspx">Registration</a></li>-->
-                        <li role="presentation"><a href="../Student/StudentCoopReport.aspx">Student Coop Report</a></li>
-                         <li role="presentation"><a href="../EmployerForm.aspx">Employer Eval Form</a></li>
                         <li role="presentation"><a href="StudentReport.aspx">View Student Reports</a></li>
+                        <li role="presentation"><a href="GenerateReport.aspx">Generate Reports</a></li>
+                        <li role="presentation" style="float:right">
+                            <asp:LinkButton ID="lnkLogout" CausesValidation="false" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                        </li>
                     </ul>
                 </nav>
             </header>
