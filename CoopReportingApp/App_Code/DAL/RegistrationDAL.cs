@@ -95,4 +95,23 @@ public class RegistrationDAL
             throw;
         }
     }
+
+    internal static DataSet StudentLogin(RegistrationBO ObjRegistrationBO)
+    {
+        SqlDataAdapter da = new SqlDataAdapter("Sp_StudentInfo", SqlCon);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.AddWithValue("@StudentID", ObjRegistrationBO.StudentId);
+        da.SelectCommand.Parameters.AddWithValue("@SPassword", ObjRegistrationBO.SPassword);
+        da.SelectCommand.Parameters.AddWithValue("@Type", "L");
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        try
+        {
+            return ds;
+        }
+        catch
+        {
+            throw;
+        }
+    }
 }
