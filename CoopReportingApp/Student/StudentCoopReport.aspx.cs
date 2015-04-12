@@ -46,6 +46,8 @@ public partial class Student_StudentCoopReport : System.Web.UI.Page
         objCoopReportBO.SelfEvaluation = rblSelfEvaluation.SelectedItem.Value;
         objCoopReportBO.Structured = rblStructured.SelectedItem.Value;
         objCoopReportBO.SupervisorActive = rblSupervisorActive.SelectedItem.Value;
+        objCoopReportBO.DutiesPerformed = txtDutiesPerformed.Text;
+        objCoopReportBO.Comments = txtComments.Text;
         ds = objCoopReportBO.InsertCoopReport(objCoopReportBO);
         if (ds.Tables.Count > 0)
         {

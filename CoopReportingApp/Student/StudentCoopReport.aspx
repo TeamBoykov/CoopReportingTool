@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <h3>Student Coop Report</h3>
-    
+        <h3>Student Coop Report</h3>
+
     <div class="row">
         <div class="col-md-12">
             <asp:Label ID="lblMessage" Font-Size="Large" runat="server" Text=""></asp:Label>
@@ -12,24 +12,27 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <asp:TextBox ID="txtSId" CssClass="form-control" placeholder="StudentID" runat="server" MaxLength="9"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" Text="Student ID:"></asp:Label>
+            <asp:TextBox ID="txtSId" CssClass="form-control" placeholder="StudentID" runat="server" MaxLength="9" ReadOnly="True"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSId"
-                ErrorMessage="StudentId Required" ForeColor="Red"  Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                ErrorMessage="StudentId Required" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtSId"
-                ErrorMessage="StudentId should be numbers" ForeColor="Red" Font-Size="X-Small"  SetFocusOnError="True"
+                ErrorMessage="StudentId should be numbers" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"
                 ValidationExpression="^[0-9/ ]+$"></asp:RegularExpressionValidator>
         </div>
         <div class="col-md-6">
-            <asp:TextBox ID="txtSName" CssClass="form-control" placeholder="Student Name" runat="server"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" Text="Student Name:"></asp:Label>
+            <asp:TextBox ID="txtSName" CssClass="form-control" placeholder="Student Name" runat="server" ReadOnly="True"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtSName"
-                ErrorMessage="Name Required" ForeColor="Red"  Font-Size="X-Small" SetFocusOnError="True" ></asp:RequiredFieldValidator>
+                ErrorMessage="Name Required" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtSName"
-                ErrorMessage="Plz,EnterCharactersOnly" ForeColor="Red"  Font-Size="X-Small" SetFocusOnError="True"
+                ErrorMessage="Plz,EnterCharactersOnly" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"
                 ValidationExpression="^[A-Za-z./ ]+$"></asp:RegularExpressionValidator>
         </div>
     </div>
     <div class="row">
-         <div class="col-md-6">
+        <div class="col-md-6">
+            <asp:Label ID="Label4" runat="server" Text="Report Month:"></asp:Label>
             <asp:DropDownList ID="ddlRmonth" CssClass="form-control" Operator="NotEqual" runat="server">
                 <asp:ListItem>Choose Month</asp:ListItem>
                 <asp:ListItem>January</asp:ListItem>
@@ -44,13 +47,13 @@
                 <asp:ListItem>October</asp:ListItem>
                 <asp:ListItem>November</asp:ListItem>
                 <asp:ListItem>December</asp:ListItem>
-
             </asp:DropDownList>
-            <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Choose Month" 
-               ControlToValidate="ddlRmonth" Font-Size="X-Small" ForeColor="red" 
-               Operator="NotEqual" SetFocusOnError="True" ValueToCompare="Choose Year"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Choose Month"
+                ControlToValidate="ddlRmonth" Font-Size="X-Small" ForeColor="red"
+                Operator="NotEqual" SetFocusOnError="True" ValueToCompare="Choose Year"></asp:CompareValidator>
         </div>
         <div class="col-md-6">
+            <asp:Label ID="Label8" runat="server" Text="Report Year:"></asp:Label>
             <asp:DropDownList ID="ddlYear" CssClass="form-control" Operator="NotEqual" runat="server">
                 <asp:ListItem>Select Year</asp:ListItem>
                 <asp:ListItem>2015</asp:ListItem>
@@ -65,34 +68,45 @@
                 <asp:ListItem>2024</asp:ListItem>
                 <asp:ListItem>2025</asp:ListItem>
             </asp:DropDownList>
-           <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Select year" 
-               ControlToValidate="ddlYear"  Font-Size="X-Small" ForeColor="red" 
-               Operator="NotEqual" SetFocusOnError="True" ValueToCompare="Select Year"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Select year"
+                ControlToValidate="ddlYear" Font-Size="X-Small" ForeColor="red"
+                Operator="NotEqual" SetFocusOnError="True" ValueToCompare="Select Year"></asp:CompareValidator>
         </div>
-       
+
 
     </div>
     <div class="row">
         <div class="col-md-6">
-            <asp:TextBox ID="txtOrg" CssClass="form-control" placeholder="Organization" runat="server"></asp:TextBox>
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtOrg"
-                ErrorMessage="Organization Name is Required" ForeColor="Red"  Font-Size="X-Small" SetFocusOnError="True" ></asp:RequiredFieldValidator>
+            <asp:Label ID="Label5" runat="server" Text="Oraganization:"></asp:Label>
+            <asp:TextBox ID="txtOrg" CssClass="form-control" placeholder="Organization" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtOrg"
+                ErrorMessage="Organization Name is Required" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"></asp:RequiredFieldValidator>
         </div>
         <div class="col-md-6">
-            <asp:TextBox ID="txtCoopAdvisorName" CssClass="form-control" placeholder="Advisor Name" runat="server"></asp:TextBox>
-               <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCoopAdvisorName"
-                ErrorMessage="Coop Advisor Name is Required" ForeColor="Red"  Font-Size="X-Small"
-                    SetFocusOnError="True" ></asp:RequiredFieldValidator>
-             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCoopAdvisorName"
+            <asp:Label ID="Label3" runat="server" Text="Co-op Advisor Name:"></asp:Label>
+            <asp:TextBox ID="txtCoopAdvisorName" CssClass="form-control" placeholder="Advisor Name" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCoopAdvisorName"
+                ErrorMessage="Coop Advisor Name is Required" ForeColor="Red" Font-Size="X-Small"
+                SetFocusOnError="True"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCoopAdvisorName"
                 ErrorMessage="Plz,EnterCharactersOnly" ForeColor="Red" Font-Size="X-Small" SetFocusOnError="True"
                 ValidationExpression="^[A-Za-z./ ]+$"></asp:RegularExpressionValidator>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
-
-            <asp:TextBox ID="txtJTitle" CssClass="form-control" placeholder="Job Tiltle" runat="server"></asp:TextBox>
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtJTitle"
-                ErrorMessage="Job title is Required" ForeColor="Red"  Font-Size="X-Small"
-                    SetFocusOnError="True" ></asp:RequiredFieldValidator>
+            <asp:Label ID="Label7" runat="server" Text="Job Title:"></asp:Label>
+            <asp:TextBox ID="txtJTitle" CssClass="form-control" placeholder="Job Tiltle" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtJTitle"
+                ErrorMessage="Job title is Required" ForeColor="Red" Font-Size="X-Small"
+                SetFocusOnError="True"></asp:RequiredFieldValidator>
+        </div>
+        <div class="col-md-6">
+            <asp:Label ID="Label6" runat="server" Text="Work Term:"></asp:Label>
+            <asp:TextBox ID="txtWorkTerm" CssClass="form-control" placeholder="WorkTerm" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtWorkTerm"
+                ErrorMessage="Job title is Required" ForeColor="Red" Font-Size="X-Small"
+                SetFocusOnError="True"></asp:RequiredFieldValidator>
         </div>
     </div>
 
@@ -355,10 +369,17 @@ agencysupervisor?
     <asp:TextBox ID="txtComments" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
     <hr />
 
-    <div align="center">
-        <asp:Button ID="btnSubmit" runat="server" CausesValidation="True" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click" />
-        <asp:Button ID="btnClear" runat="server" CausesValidation="False"
-            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" />
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <asp:Button ID="btnSubmit" runat="server" CausesValidation="True" Text="Submit" CssClass="btn btn-success" Height="41px" Width="138px" OnClick="btnSubmit_Click" />
+            <asp:Button ID="btnClear" runat="server" CausesValidation="False"
+                Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" />
+        </div>
+        <div class="col-md-4">
+        </div>
+
     </div>
     <br />
 </asp:Content>

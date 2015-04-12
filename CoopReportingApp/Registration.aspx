@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="row">
+     <div class="row">
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
@@ -63,6 +63,20 @@
                 <div class="col-md-2">
                     <asp:RequiredFieldValidator ErrorMessage="Password Required" ForeColor="Red" ControlToValidate="txtPassword"
                         runat="server" SetFocusOnError="True" Font-Size="XX-Small" />
+                </div>
+            </div>
+            <br />
+             <div class="row">
+                <div class="col-md-3">
+                    <asp:Label ID="Label22" runat="server" Text="Confirm Password"></asp:Label>
+                </div>
+                <div class="col-md-7">
+                    <asp:TextBox ID="txtConfirmPassword" TextMode="Password" runat="server" CssClass="form-control" placeholder="Confirm Password" />
+                </div>
+                <div class="col-md-2">
+                    <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToCompare="txtPassword"
+                         ControlToValidate="txtConfirmPassword" ErrorMessage="Please, enter same password again" Font-Size="XX-Small"
+                         ForeColor="#CC0000"></asp:CompareValidator>
                 </div>
             </div>
             <br />
@@ -326,4 +340,5 @@
         <div class="col-md-4"></div>
     </div>
     <br />
+
 </asp:Content>
