@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CoopAdvisor/coopadvisor.Master" AutoEventWireup="true" CodeFile="IndividualReport.aspx.cs" Inherits="CoopAdvisor_IndividualReport" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <h3>Individual Student Coop Report</h3>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <h3>Individual Student Coop Report</h3>
     <div class="row">
         <div class="col-md-6">
             <asp:Label ID="Label1" runat="server" Text="Student ID:"></asp:Label>
@@ -34,12 +34,22 @@
             <asp:Label ID="lblJobTitle" CssClass="form-control" runat="server" Text=""></asp:Label>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <asp:Label ID="Label6" runat="server" Text="Report Year:"></asp:Label>
+            <asp:Label ID="lblyear" CssClass="form-control" runat="server" Text=""></asp:Label>
+        </div>
+        <div class="col-md-6">
+            <asp:Label ID="Label9" runat="server" Text="Work Term:"></asp:Label>
+            <asp:Label ID="lblworkterm" CssClass="form-control" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
     <hr />
     <p>1. Do you like your internship? Why or why not? Please explain.</p>
     <div class="row">
         <div class="col-md-2" aria-orientation="vertical">
-            <asp:RadioButtonList ID="rblIntership" runat="server" RepeatDirection="Horizontal" Width="1000px" >
-              <asp:ListItem>Yes Definitely</asp:ListItem>
+            <asp:RadioButtonList ID="rblIntership" runat="server" RepeatDirection="Horizontal" Width="1000px">
+                <asp:ListItem>Yes Definitely</asp:ListItem>
                 <asp:ListItem>Yes</asp:ListItem>
                 <asp:ListItem>Somewhat</asp:ListItem>
                 <asp:ListItem>No</asp:ListItem>
