@@ -21,6 +21,7 @@ public class CoopReportBO
     public int Year { get; set; }
     public string ReportMonth { get; set; }
     public string JobTitle { get; set; }
+    public string WorkTerm { get; set; }
     public string LikeIntership { get; set; }
     public string AdequatelyPrepared { get; set; }
     public string Curriculum { get; set; }

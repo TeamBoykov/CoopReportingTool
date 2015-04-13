@@ -351,5 +351,31 @@ namespace EmployerUntTest
             }
 
         }
+
+        //Register Student
+        [TestMethod]
+        public void Registration() {
+            ObjRegistrationBO.StudentId = 300718283;
+            ObjRegistrationBO.SFname = "Srinivasarao";
+            ObjRegistrationBO.SLname = "Ch";
+            ObjRegistrationBO.SProgram = "Software Engineering";
+            ObjRegistrationBO.SEmail = "sri2vas@1.com";
+            ObjRegistrationBO.SAddress1 = "370";
+            ObjRegistrationBO.SAddress2 = "Schreyer Screscent";
+            ObjRegistrationBO.SCity = "Milton";
+            ObjRegistrationBO.SProvince = "Ontario";
+            ObjRegistrationBO.SPostalCode = "L9T7T2";
+            ObjRegistrationBO.SPhone = "6477866026";
+            ObjRegistrationBO.SCell = "6477866025";
+            var ds = ObjRegistrationBO.Registration(ObjRegistrationBO);
+            if (ds.Tables.Count > 0)
+            {
+                Console.WriteLine("Student successfully inserted");
+            }
+            else {
+                Console.WriteLine("Student record already exists");
+            }
+
+        }
     }
 }

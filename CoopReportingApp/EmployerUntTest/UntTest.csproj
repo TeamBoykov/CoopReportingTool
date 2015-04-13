@@ -61,6 +61,7 @@
     <Compile Include="Employer.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Gradepage.cs" />
+    <Compile Include="Advisor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

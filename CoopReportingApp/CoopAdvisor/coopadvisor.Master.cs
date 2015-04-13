@@ -11,7 +11,19 @@ namespace CoopReportingApp.CoopAdvisor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Session["AdvisorName"] == null)
+                {
+                    Response.Redirect("~/index.aspx");
+                }
+            }
+        }
+        protected void lnkLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Redirect("~/index.aspx");
         }
     }
 }

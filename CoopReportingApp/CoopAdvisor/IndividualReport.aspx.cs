@@ -29,6 +29,8 @@ public partial class CoopAdvisor_IndividualReport : System.Web.UI.Page
             lblOraganization.Text = ds.Tables[0].Rows[0]["Oraganization"].ToString();
             lblReportMonth.Text = ds.Tables[0].Rows[0]["ReportMonth"].ToString();
             lblJobTitle.Text = ds.Tables[0].Rows[0]["JobTitle"].ToString();
+            lblworkterm.Text = ds.Tables[0].Rows[0]["WorkTerm"].ToString();
+            lblyear.Text = ds.Tables[0].Rows[0]["Year"].ToString();
             rblIntership.SelectedValue = ds.Tables[0].Rows[0]["LikeIntership"].ToString();
             rblAdequately.SelectedValue = ds.Tables[0].Rows[0]["AdequatelyPrepared"].ToString();
             rblCurriculum.SelectedValue = ds.Tables[0].Rows[0]["Curriculum"].ToString();
