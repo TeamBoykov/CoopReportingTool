@@ -12,7 +12,6 @@ public partial class EmployerForm : System.Web.UI.Page
     DataSet ds = new DataSet();
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtSubmittedDate.Text = DateTime.Now.ToString();
         if (!IsPostBack)
         {
             txtSId.Focus();
@@ -56,9 +55,6 @@ public partial class EmployerForm : System.Web.UI.Page
         ObjEmployerBO.Term = ddlWorkTerm.Text;
         ObjEmployerBO.WrittenCommunication = rblWrittenCommunication.SelectedItem.Value;
         ObjEmployerBO.year = int.Parse(ddlYear.SelectedItem.ToString());
-        ObjEmployerBO.NextWorkTermFrom = txtFromDate.Text;
-        ObjEmployerBO.NextWorkTermTo = txtToDate.Text;
-        ObjEmployerBO.Currentdate = Convert.ToDateTime(txtSubmittedDate.Text);
         ds = ObjEmployerBO.InsertEmpEvalForm(ObjEmployerBO);
         if (ds.Tables.Count > 0)
         {
@@ -70,5 +66,19 @@ public partial class EmployerForm : System.Web.UI.Page
             lblMessage.ForeColor = System.Drawing.Color.Red;
             lblMessage.Text = txtSName.Text + "'s Evaluation form is already submitted for " + ddlWorkTerm.SelectedItem.ToString() + " Term";
         }
+    }
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        txtSId.Text = "";
+        txtSName.Text = "";
+        txtOrg.Text = "";
+        txtJTitle.Text = "";
+        ddlWorkTerm.SelectedIndex = 0;
+        ddlYear.SelectedIndex = 0;
+        txtSupervisorsComments.Text = "";
+        txtSupervisorsRecommendations.Text = "";
+        txtSupervisorsName.Text = "";
+        txtSupervisorsTitle.Text = "";
+        txtmanagerName.Text = "";
     }
 }
