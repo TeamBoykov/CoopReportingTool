@@ -24,19 +24,29 @@ namespace CoopReportingApp
             DataSet ds = new DataSet();
             if (ddlloginas.SelectedItem.ToString() == "Student")
             {
-                ObjRegistrationBO.StudentId = int.Parse(txtusername.Text);
-                ObjRegistrationBO.SPassword = txtpassword.Text;
-                ds = ObjRegistrationBO.StudentLogin(ObjRegistrationBO);
-                if (ds.Tables[0].Rows.Count > 0)
+                int i;
+                if (!int.TryParse(txtusername.Text, out i))
                 {
-                    Session["StudentID"] = int.Parse(txtusername.Text);
-                    Response.Redirect("~/Student/Profile.aspx");
+                    lblmessage.ForeColor = System.Drawing.Color.Red;
+                    lblmessage.Text = "Invalid Username";
                 }
                 else
                 {
-                    lblmessage.ForeColor = System.Drawing.Color.Red;
-                    lblmessage.Text = "Invalid login credentials";
+                    ObjRegistrationBO.StudentId = int.Parse(txtusername.Text);
+                    ObjRegistrationBO.SPassword = txtpassword.Text;
+                    ds = ObjRegistrationBO.StudentLogin(ObjRegistrationBO);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        Session["StudentID"] = int.Parse(txtusername.Text);
+                        Response.Redirect("~/Student/Profile.aspx");
+                    }
+                    else
+                    {
+                        lblmessage.ForeColor = System.Drawing.Color.Red;
+                        lblmessage.Text = "Invalid login credentials";
+                    }
                 }
+
             }
             else
             {

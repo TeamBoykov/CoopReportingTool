@@ -52,7 +52,6 @@
             <asp:DropDownList ID="ddlWorkTerm" CssClass="form-control" runat="server">
                 <asp:ListItem>Select Term</asp:ListItem>
                 <asp:ListItem>Winter</asp:ListItem>
-                <asp:ListItem>Spring</asp:ListItem>
                 <asp:ListItem>Summer</asp:ListItem>
                 <asp:ListItem>Fall</asp:ListItem>
 
@@ -76,7 +75,6 @@
                 <asp:ListItem>2023</asp:ListItem>
                 <asp:ListItem>2024</asp:ListItem>
                 <asp:ListItem>2025</asp:ListItem>
-                <asp:ListItem></asp:ListItem>
             </asp:DropDownList>
             <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Select Year" 
                ControlToValidate="ddlYear"  Font-Size="X-Small" ForeColor="red" 
@@ -390,7 +388,7 @@ professional development (optional):
         </div>
     </div>
     <hr />
-    <p>
+   <%-- <p>
         If the student has accepted please, confirm:
     </p>
     <p>
@@ -406,15 +404,23 @@ professional development (optional):
             <asp:TextBox ID="txtToDate" placeholder="MM/DD/YYYY" CssClass="form-control" runat="server"></asp:TextBox>
         </div>
     </div>
-    <hr />
+    <hr />--%>
     <div class="row">
         <div class="col-md-6">
             <asp:Label ID="Label8" runat="server" Text="Supervisors Name:"></asp:Label>
             <asp:TextBox ID="txtSupervisorsName" placeholder="Supervisors Name" CssClass="form-control" runat="server"></asp:TextBox>
+             <asp:RequiredFieldValidator ErrorMessage="Supervisors Name Required" ForeColor="Red" ControlToValidate="txtSupervisorsName"
+                runat="server" Font-Size="X-Small"  SetFocusOnError="True" />
+            <asp:RegularExpressionValidator ErrorMessage="Invalid Supervisors Name" Display="Dynamic" ForeColor="Red"
+                ValidationExpression="^[A-Za-z./ ]+$" Font-Size="X-Small" ControlToValidate="txtSupervisorsName" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
         </div>
         <div class="col-md-6">
             <asp:Label ID="Label11" runat="server" Text="Supervisors Title:"></asp:Label>
             <asp:TextBox ID="txtSupervisorsTitle" placeholder="Supervisors Title" CssClass="form-control" runat="server"></asp:TextBox>
+             <asp:RequiredFieldValidator ErrorMessage="Supervisors title Required" ForeColor="Red" ControlToValidate="txtSupervisorsTitle"
+                runat="server" Font-Size="X-Small"  SetFocusOnError="True" />
+            <asp:RegularExpressionValidator ErrorMessage="Invalid Supervisors Title" Display="Dynamic" ForeColor="Red"
+                ValidationExpression="^[A-Za-z./ ]+$" Font-Size="X-Small" ControlToValidate="txtSupervisorsTitle" runat="server" EnableClientScript="False" SetFocusOnError="True"></asp:RegularExpressionValidator>
         </div>
     </div>
     <hr />
@@ -424,15 +430,24 @@ professional development (optional):
             <asp:TextBox ID="txtmanagerName" placeholder="Manager Name" CssClass="form-control" runat="server"></asp:TextBox>
         </div>
         <div class="col-md-6">
-            <asp:Label ID="Label13" runat="server" Text="Submitted Date:"></asp:Label>
-            <asp:TextBox ID="txtSubmittedDate" placeholder="MM/DD/YYYY" CssClass="form-control" runat="server"></asp:TextBox>
+           <%-- <asp:Label ID="Label13" runat="server" Text="Submitted Date:"></asp:Label>
+            <asp:TextBox ID="txtSubmittedDate" placeholder="MM/DD/YYYY" CssClass="form-control" runat="server"></asp:TextBox>--%>
         </div>
     </div>
     <hr />
-    <div align="center">
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary " Height="41px" Width="138px" OnClick="btnSubmit_Click" />
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+         <div class="col-md-4">
+             <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-success" OnClick="btnSubmit_Click" />
         <asp:Button ID="btnClear" runat="server" CausesValidation="False"
-            Text="Clear" CssClass="btn btn-warning" Height="41px" Width="138px" />
+            Text="Clear" CssClass="btn btn-warning" OnClick="btnClear_Click"/>
+        </div>
+         <div class="col-md-4">
+
+        </div>
+        
     </div>
     <br />
 
